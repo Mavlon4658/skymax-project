@@ -1,1 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    
+    <div class="wrapper">
 
+        <!-- Header -->
+        <header class="header">
+            <div class="container header__container">
+                <a href="/" class="header__logo">
+                    <img src="./images/logo.svg" alt="">
+                </a>
+                <ul class="header__navs">
+                    <li>
+                        <a href="#" class="active">Главная</a>
+                    </li>
+                    <li>
+                        <a href="#">Услуги</a>
+                    </li>
+                    <li>
+                        <a href="#">Партнерство</a>
+                    </li>
+                    <li>
+                        <a href="#">О компании</a>
+                    </li>
+                    <li>
+                        <a href="#">Контакты</a>
+                    </li>
+                </ul>
+                <a href="tel:++79686113473" class="phone-link">+7 (968) 611 34 73</a>
+            </div>
+        </header>
+        <!-- Header end -->
+
+        <!-- Modals -->
+        <!-- Aplication modal -->
+        <section class="modal application-modal">
+            <div class="modal__bg"></div>
+            <div class="modal__content">
+                <button type="button" class="modal__close">
+                    <img src="./images/times.svg" alt="">
+                </button>
+                <h2 class="sec-title">СПАСИБО ЗА ОБРАЩЕНИЕ <br> <span>мы с вами свяжемся</span></h2>
+            </div>
+        </section>
+        <!-- Aplication modal end -->
+
+        <!-- Partner modal -->
+        <section class="modal partner-modal">
+            <div class="modal__bg"></div>
+            <div class="modal__content">
+                <button type="button" class="modal__close">
+                    <img src="./images/times.svg" alt="">
+                </button>
+                <h2 class="sec-title">Оставьте заявку <br> <span>мы с вами свяжемся</span></h2>
+                <div class="form_group">
+                    <input type="text" class="form_inp" placeholder="Ваше имя ">
+                    <input type="tel" name="" placeholder="+7 (___) ___ __ __" id="" class="form_inp">
+                </div>
+                <button class="btn-light">Отправить</button>
+            </div>
+        </section>
+        <!-- Partner modal end -->
+        <!-- Modals end -->
+
+        <main>
+
+            <!-- Home -->
+            <section class="home">
+                <img src="./images/home-bg.png" alt="" class="home__bg">
+                <div class="container home__container">
+                    <img src="./images/home-card.png" alt="" class="home__card">
+                    <h2 class="home__title">PEGAS COMPANY</h2>
+                    <p class="home__description">ФИНАНСОВАЯ поддержка, на которую можно положиться в любой ситуации.</p>
+                    <div class="home__form">
+                        <h3>Нужна консультация?</h3>
+                        <div class="form_group">
+                            <input type="tel" class="form_inp phone" placeholder="+7 (___) ___ __ __">
+                            <button class="btn-light application-modal__open">консультация</button>
+                        </div>
+                    </div>
+                    <ul>
+                        <li>
+                            <h4>89%</h4>
+                            <p>Успешных кейсов</p>
+                        </li>
+                        <li>
+                            <h4>14</h4>
+                            <p>Сотрудника в штате</p>
+                        </li>
+                        <li>
+                            <h4>5</h4>
+                            <p>Действующих адвокатов</p>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <!-- Home end -->
+
+            <!-- Company -->
+            <section class="company">
+                <div class="container company__container">
+                    <div class="company__left">
+                        <img src="./images/company-bg.png" class="bg-img" alt="">
+                        <img src="./images/logo-black.svg" alt="" class="logo">
+                        <h2>PEGAS</h2>
+                        <p>company</p>
+                    </div>
+                    <div class="company__right">
+                        <img src="./images/bracket-down.svg" alt="" class="bracket-1">
+                        <img src="./images/bracket-up.svg" alt="" class="bracket-2">
+                        <h4 class="subtitle">
+                            <span class="line"></span>
+                            <span>Слово руководителя</span>
+                        </h4>
+                        <h3 class="sec-title">
+                            Потому что нам <br>
+                            <span>не все равно</span>
+                        </h3>
+                        <p>В нашей компании мы верим, что каждый клиент заслуживает индивидуального подхода и безупречного сервиса. Мы не просто решаем финансовые проблемы — мы строим доверительные отношения и защищаем ваши интересы с максимальной отдачей. Ваша уверенность в завтрашнем дне и финасовая стабильность — наш главный приоритет</p>
+                        <h5>Генеральный директор</h5>
+                    </div>
+                </div>
+            </section>
+            <!-- Company end -->
+
+            <!-- Our advantages -->
+            <section class="advantage">
+                <div class="container advantage__container">
+                    <img src="./images/advantage-bg.png" alt="" class="advantage__bg">
+                    <h3 class="subtitle">
+                        <span>Наши преимущества</span>
+                    </h3>
+                    <h2 class="sec-title">
+                        Почему <span>выбирают</span> нас
+                    </h2>
+                    <ul>
+                        <li>
+                            <img src="./images/advantage-icon-1.svg" alt="">
+                            <h3>круглосуточная поддержка</h3>
+                            <p>Звонки по любым вопросам <br>в удобное для вас время. <br>Мы всегда рядом</p>
+                        </li>
+                        <li>
+                            <img src="./images/advantage-icon-2.svg" alt="">
+                            <h3>Высокая экспертность</h3>
+                            <p>Наши специалисты постоянно улучшают свои навыки и изучают новые подходы</p>
+                        </li>
+                        <li>
+                            <img src="./images/advantage-icon-3.svg" alt="">
+                            <h3>думаем на два шага вперед</h3>
+                            <p>Всегда в запасе дополнительный способ решения Вашего вопроса</p>
+                        </li>
+                        <li>
+                            <img src="./images/advantage-icon-4.svg" alt="">
+                            <h3>Знания – наша сила</h3>
+                            <p>Все специалисты имеют профильное образование, а так же повышают квалификацию каждый год</p>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <!-- Our advantages end -->
+
+            <!-- Team -->
+            <section class="team">
+                <div class="container team__container">
+                    <div class="team__content">
+                        <h3 class="subtitle">
+                            <span class="line"></span>
+                            <span>Наша команда</span>
+                        </h3>
+                        <h2 class="sec-title">Наши специалисты <br> знают <span>свое дело</span></h2>
+                        <p>Я обеспечу представление и защиту Ваших интересов в банках и иных кредитных организациях.</p>
+                        <a href="#" class="btn-light">Заказать звонок</a>
+                    </div>
+                    <ul class="team__list">
+                        <li>
+                            <div class="main-img">
+                                <img src="./images/team-1.png" alt="">
+                            </div>
+                            <h3>КИРИЛЛ АЛЕКСАНДРОВич</h3>
+                            <p>27 лет стажа</p>
+                        </li>
+                        <li>
+                            <h3>Любовь Юрьевна</h3>
+                            <p>18 лет стажа</p>
+                            <div class="main-img">
+                                <img src="./images/team-2.png" alt="">
+                            </div>
+                        </li>
+                        <li>
+                            <div class="main-img">
+                                <img src="./images/team-3.png" alt="">
+                            </div>
+                            <h3>Иван васильевич</h3>
+                            <p>17 лет стажа</p>
+                        </li>
+                        <li>
+                            <h3>АННА ДМИТРИЕВНА</h3>
+                            <p>12 лет стажа</p>
+                            <div class="main-img">
+                                <img src="./images/team-4.png" alt="">
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <!-- Team end -->
+
+            <!-- Service -->
+            <section class="service">
+                <img src="./images/service-bg.png" alt="" class="service__bg">
+                <div class="container">
+                    <h2 class="sec-title">
+                        <span>ОКАЗЫВАЕМЫЕ</span> УСЛУГи
+                    </h2>
+                    <ul class="service__list">
+                        <li>
+                            <img src="./images/up-icon.svg" alt="">
+                            <p>Банкротство</p>
+                            <img src="./images/down-icon.svg" alt="">
+                        </li>
+                        <li>
+                            <img src="./images/up-icon.svg" alt="">
+                            <p>Реструктуризация долга</p>
+                            <img src="./images/down-icon.svg" alt="">
+                        </li>
+                        <li>
+                            <img src="./images/up-icon.svg" alt="">
+                            <p>Рефинансирование олга</p>
+                            <img src="./images/down-icon.svg" alt="">
+                        </li>
+                        <li>
+                            <img src="./images/up-icon.svg" alt="">
+                            <p>Кредиты</p>
+                            <img src="./images/down-icon.svg" alt="">
+                        </li>
+                        <li>
+                            <img src="./images/up-icon.svg" alt="">
+                            <p>Ипотека</p>
+                            <img src="./images/down-icon.svg" alt="">
+                        </li>
+                        <li>
+                            <img src="./images/up-icon.svg" alt="">
+                            <p>Общение с колекторами</p>
+                            <img src="./images/down-icon.svg" alt="">
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <!-- Service end -->
+
+            <!-- Review -->
+            <section class="review">
+                <div class="container">
+                    <p class="subtitle">
+                        <span>О нас говорят</span>
+                    </p>
+                    <h2 class="sec-title">
+                        <span>Отзывы</span> наших клиентов
+                    </h2>
+                    <div class="review__swp">
+                        <button class="swp_btn swp_btn__prev">
+                            <img src="./images/chevron-left.svg" alt="">
+                        </button>
+                        <button class="swp_btn swp_btn__next">
+                            <img src="./images/chevron-right.svg" alt="">
+                        </button>
+                        <div class="swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="review__swp_content">
+                                        <img src="./images/bracket-down.svg" alt="" class="icon-1">
+                                        <img src="./images/bracket-up.svg" alt="" class="icon-2">
+                                        <p>Супер обслуживание! Я боялся, что не смогу получить кредит из-за сложной финансовой ситуации, но специалисты этой брокерской компании сделали невозможное. Они нашли банк, который согласился дать мне деньги на выгодных условиях. Все прошло быстро, понятно и без лишних вопросов. Рекомендую всем, кто ищет надежную помощь в финансовых вопросах!</p>
+                                        <h3>Виктор ИЛЬИН</h3>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="review__swp_content">
+                                        <img src="./images/bracket-down.svg" alt="" class="icon-1">
+                                        <img src="./images/bracket-up.svg" alt="" class="icon-2">
+                                        <p>Я очень благодарен этой компании за помощь в получении кредита! Мне срочно нужны были деньги на развитие бизнеса, но банки долго рассматривали заявки. Сотрудники компании помогли выбрать лучший вариант, быстро подготовили все документы и сопровождали на каждом этапе. В итоге я получил одобрение всего за несколько дней. Большое спасибо за профессионализм и поддержку!</p>
+                                        <h3>ЕВГЕНИЙ АЛЕКСАНДРОВИЧ</h3>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="review__swp_content">
+                                        <img src="./images/bracket-down.svg" alt="" class="icon-1">
+                                        <img src="./images/bracket-up.svg" alt="" class="icon-2">
+                                        <p>Я обратилась в компанию с проблемой колекторского преследования, и осталась невероятно довольна результатом. Команда юристов действовала оперативно, профессионально и с вниманием к деталям. Благодаря их усилиям, мой вопрос был разрешён в мою пользу, и я получила полное возмещение убытков. Я искренне рекомендую эту компанию всем, кто ищет надёжную помощь.</p>
+                                        <h3>Юлия Воробьева</h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swp_pagination"></div>
+                </div>
+            </section>
+            <!-- Review end -->
+
+            <!-- Loan -->
+            <section class="loan">
+                <div class="container loan__container">
+                    <h2 class="sec-title">
+                        <span>ПОЛУЧИТЬ КРЕДИТ</span>
+                    </h2>
+                    <div class="form_group">
+                        <input type="text" placeholder="Ваш ФИО" class="form_inp">
+                        <input type="text" placeholder="Сумма кредита" class="form_inp">
+                        <input type="text" placeholder="ВТелефон" class="form_inp">
+                        <input type="text" placeholder="Срок кредита" class="form_inp">
+                    </div>
+                    <button class="btn-yellow application-modal__open">ОСТАВИТЬ ЗАЯВКУ</button>
+                </div>
+            </section>
+            <!-- Loan end -->
+
+            <!-- Our blog -->
+            <section class="blog">
+                <div class="container blog__container">
+                    <div class="blog__head">
+                        <div>
+                            <p class="subtitle">
+                                <span class="line"></span>
+                                <span>Наш блог</span>
+                            </p>
+                            <h2 class="sec-title">
+                                <span>полезно</span> знать
+                            </h2>
+                        </div>
+                        <button class="btn-light">Читать больше</button>
+                    </div>
+                    <ul class="blog__list">
+                        <li>
+                            <div class="main-img">
+                                <img src="./images/blog-card-1.png" alt="">
+                            </div>
+                            <div class="blog__list_body">
+                                <p>15 апреля</p>
+                                <h3>Как использовать закон в свою пользу?</h3>
+                                <a href="#" class="btn-light">Читать</a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="main-img">
+                                <img src="./images/blog-card-2.png" alt="">
+                            </div>
+                            <div class="blog__list_body">
+                                <p>09 апреля</p>
+                                <h3>библиотека поддержки. <br>Что почитать?</h3>
+                                <a href="#" class="btn-light">Читать</a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="main-img">
+                                <img src="./images/blog-card-3.png" alt="">
+                            </div>
+                            <div class="blog__list_body">
+                                <p>06 марта</p>
+                                <h3>на что обратить внимание в документах?</h3>
+                                <a href="#" class="btn-light">Читать</a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="main-img">
+                                <img src="./images/blog-card-4.png" alt="">
+                            </div>
+                            <div class="blog__list_body">
+                                <p>23 февраля</p>
+                                <h3>залог успешных дел наших специалистов</h3>
+                                <a href="#" class="btn-light">Читать</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <!-- Our blog end -->
+
+            <!-- Course -->
+            <section class="course">
+                <div class="container course__container">
+                    <p class="subtitle">
+                        <span>Будьте в курсе</span>
+                    </p>
+                    <h2 class="sec-title">
+                        <span>подпишитесь</span> на наши новости
+                    </h2>
+                    <p class="description">Чтобы всегда быть в курсе дел и обновлении законов.</p>
+                    <div class="form_group">
+                        <input type="email" name="" placeholder="Ваш e-mail" id="" class="form_inp">
+                        <button class="btn-light">подписаться</button>
+                    </div>
+                </div>
+            </section>
+            <!-- Course end -->
+
+            <!-- Contact -->
+            <section class="contact">
+                <div class="contact__map">
+                    <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Ab840c9e381a78bc8bebbfcd415ac8efe87f8debd1d7c85132eb1937645038cb3&amp;source=constructor" width="1175" height="720" frameborder="0"></iframe>
+                </div>
+                <div class="contact__content">
+                    <img src="./images/contact-bg.png" alt="" class="bg-img">
+                    <div class="cotact__content_in">
+                        <p class="subtitle">
+                            <span class="line"></span>
+                            <span>На связи с нами</span>
+                        </p>
+                        <h2 class="sec-title"><span>Контактная</span> информация</h2>
+                        <ul>
+                            <li>
+                                <p>телефон</p>
+                                <a href="tel:+7 (968) 611 3473">+7 (968) 611 3473</a>
+                            </li>
+                            <li>
+                                <p>почта</p>
+                                <a href="mailto:pegas_kredit@mail.ru" target="_blank">pegas_kredit@mail.ru</a>
+                            </li>
+                            <li>
+                                <p>адрес</p>
+                                <a href="#">Москва, ул. 2-я синичкина, д. 9A, с.7</a>
+                            </li>
+                        </ul>
+                        <div class="form_group">
+                            <h3>Нужна консультация?</h3>
+                            <div class="form_control">
+                                <input type="tel" class="form_inp" placeholder="+7 (___) ___ __ __">
+                                <button class="btn-light application-modal__open">Заказать звонок</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Contact end -->
+
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">© Все права защищены 2024</footer>
+        <!-- Footer end -->
+
+    </div>
+
+    <script src="https://unpkg.com/imask"></script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- JS file -->
+    <script src="./js/main.js"></script>
+</body>
+</html>
