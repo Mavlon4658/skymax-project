@@ -28,6 +28,10 @@ textarea {
     @include media(1880) {
         max-width: calc(100% - 100px);
     }
+
+    @include media(992) {
+        max-width: calc(100% - 40px);
+    }
 }
 
 .form {
@@ -87,10 +91,18 @@ textarea {
     align-items: center;
     gap: 8px;
 
+    @include media(992) {
+        font-size: 10px;
+    }
+
     .line {
         width: 44px;
         height: 0.5px;
-        background: $color-disable-gray
+        background: $color-disable-gray;
+
+        @include media(992) {
+            width: 30px;
+        }
     }
 }
 
@@ -100,6 +112,11 @@ textarea {
     line-height: 52px;
     font-weight: 200;
     text-transform: uppercase;
+
+    @include media(992) {
+        font-size: 27px;
+        line-height: 35px;
+    }
 
     span {
         display: inline;
@@ -116,24 +133,49 @@ textarea {
     z-index: 2;
     border-bottom: 1px solid rgba(177, 177, 177, 0.16);
 
+    @include media(992) {
+        border: 0;
+    }
+
     &__container {
         position: relative;
         display: flex;
         align-items: center;
         justify-content: center;
+
+        @include media(992) {
+            justify-content: space-between;
+            padding: 22px 0 20px;
+        }
     }
 
     &__logo {
-        position: absolute;
-        left: 0;
-        top: 50%;
-        transform: translateY(-50%);
         display: flex;
         align-items: center;
         justify-content: center;
+        
+        @include media(-992) {
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+        }
 
         img {
             height: 86px;
+            
+            @include media(992) {
+                display: none;
+                height: auto;
+            }
+
+            &.sm {
+                display: none;
+
+                @include media(992) {
+                    display: block;
+                }
+            }
         }
     }
 
@@ -141,6 +183,10 @@ textarea {
         display: flex;
         align-items: center;
         gap: 28px;
+
+        @include media(992) {
+            display: none;
+        }
         
         a {
             color: $color-disable-gray;
@@ -181,9 +227,145 @@ textarea {
         font-family: $font-optimal;
         font-weight: 400;
         font-size: 16px;
+
+        @include media(992) {
+            display: none;
+        }
+    }
+
+    .bars {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        @include media(-992) {
+            display: none;
+        }
     }
 }
 // Header end
+
+// Mobile menu
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+    font-size: 16px;
+    display: none;
+
+    @include media(-992) {
+        display: none !important;
+    }
+    
+    &__bg {
+        background: rgba(35, 34, 40, 0.8);
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    &__content {
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 300px;
+        height: 100%;
+        background: #FFF;
+        padding: 32px 20px;
+    }
+    
+    ul {
+        position: relative;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        font-size: 16px;
+
+        a.active {
+            color: #E3C37A;
+        }
+
+        .phone-link {
+            color: #E3C37A;
+            font-family: $font-optimal;
+        }
+    }
+
+    &.active {
+        display: block;
+
+        .mobile-menu {
+            @keyframes bgActive {
+                from {
+                    opacity: 0;
+                }
+                to {
+                    opacity: 1;
+                }
+            }
+
+            &__bg {
+                animation: .3s bgActive linear 1;
+            }
+
+            @keyframes contentActive {
+                from {
+                    transform: translateX(-100%);
+                }
+                to {
+                    transform: translateX(0);
+                }
+            }
+
+            &__content {
+                animation: 0.3s contentActive linear 1;
+            }
+        }
+    }
+
+    &.end-active {
+        display: block;
+
+        .mobile-menu {
+            @keyframes bgEndActive {
+                from {
+                    opacity: 1;
+                }
+                to {
+                    opacity: 0;
+                }
+            }
+
+            &__bg {
+                animation: .3s bgEndActive linear 1;
+                opacity: 0;
+            }
+
+            @keyframes contentEndActive {
+                from {
+                    transform: translateX(0);
+                    opacity: 1;
+                }
+                to {
+                    transform: translateX(-100%);
+                    opacity: 1;
+                }
+            }
+
+            &__content {
+                animation: 0.3s contentEndActive linear 1;
+                opacity: 0;
+            }
+        }
+    }
+}
+// Mobile menu end
 
 // Modal
 .modal {
@@ -215,6 +397,11 @@ textarea {
         top: -18px;
         right: -18px;
         transform: translate(100%, -100%);
+
+        @include media(1050) {
+            top: -4px;
+            right: -4px;
+        }
     }
 
     &__content {
@@ -230,6 +417,17 @@ textarea {
         text-align: center;
         gap: 40px;
 
+        @include media(1050) {
+            width: 313px;
+            padding: 33px 26px;
+            gap: 12px;
+
+            .sec-title {
+                font-size: 18px;
+                line-height: 100%;
+            }
+        }
+
         &::before {
             content: "";
             position: absolute;
@@ -239,6 +437,13 @@ textarea {
             height: calc(100% - 48px);
             border: 1px solid #A4834E;
             z-index: -1;
+
+            @include media(1050) {
+                width: calc(100% - 15.6px);
+                height: calc(100% - 15.6px);
+                top: 7.8px;
+                left: 7.8px;
+            }
         }
     }
 }
@@ -252,15 +457,31 @@ textarea {
         flex-direction: column;
         gap: 24px;
 
+        @include media(1050) {
+            width: 151px;
+            gap: 7px;
+        }
+
         input {
             width: 100%;
             border: 1px solid #D9D9D9;
+
+            @include media(1050) {
+                height: 12px;
+                font-size: 4px;
+            }
         }
     }
 
     .btn-light {
         color: #232228;
         font-family: $font-optimal;
+
+        @include media(1050) {
+            width: 40px;
+            height: 12px;
+            font-size: 5px;
+        }
     }
 }
 // Partner modal end
@@ -277,12 +498,17 @@ textarea {
         width: 100%;
         height: 100%;
         z-index: -1;
+        object-fit: cover;
     }
 
     &__container {
         padding: 176px 0 5px 0;
         position: relative;
         z-index: 1;
+
+        @include media(992) {
+            padding: 93px 0 35px;
+        }
     }
 
     &__card {
@@ -291,6 +517,23 @@ textarea {
         right: 0;
         bottom: 0;
         z-index: -1;
+
+        @include media(992) {
+            display: none;
+            position: static;
+            width: 100%;
+            height: 483px;
+            object-fit: contain;
+            // filter: drop-shadow(0 0 12px #A4834E);
+        }
+
+        &.sm {
+            display: none;
+
+            @include media(992) {
+                display: block;
+            }
+        }
     }
 
     &__title {
@@ -300,6 +543,12 @@ textarea {
         font-size: 64px;
         line-height: 72px;
         margin-bottom: 60px;
+
+        @include media(992) {
+            font-size: 42px;
+            line-height: 47px;
+            margin-bottom: 20px;
+        }
     }
 
     &__description {
@@ -311,10 +560,20 @@ textarea {
         text-transform: uppercase;
         margin-bottom: 62px;
         max-width: 632px;
+
+        @include media(992) {
+            font-size: 13px;
+            line-height: 18px;
+            margin-bottom: 0;
+        }
     }
 
     &__form {
         margin-bottom: 74px;
+
+        @include media(992) {
+            margin-bottom: 39px;
+        }
 
         h3 {
             color: $color-white;
@@ -322,6 +581,10 @@ textarea {
             font-family: $font-optimal;
             font-weight: 400;
             margin-bottom: 24px;
+
+            @include media(992) {
+                display: none;
+            }
         }
 
         input {
@@ -332,6 +595,13 @@ textarea {
             display: flex;
             align-items: stretch;
             gap: 8px;
+
+            @include media(992) {
+                max-width: 307px;
+                margin: 0 auto;
+                flex-direction: column;
+                align-items: center;
+            }
         }
     }
 
@@ -339,11 +609,22 @@ textarea {
         display: inline-flex;
         gap: 2px;
         align-items: stretch;
+
+        @include media(992) {
+            gap: 0px;
+            width: 100%;
+        }
         
         li {
             background: rgba(35, 34, 40, 0.62);
             width: 302px;
             padding: 38px 32px;
+
+            @include media(992) {
+                width: calc(100% / 3);
+                padding: 16px 22px 16px 13px;
+                background: transparent;
+            }
         }
 
         h4 {
@@ -353,6 +634,11 @@ textarea {
             font-weight: 200;
             line-height: 52px;
             margin-bottom: 16px;
+
+            @include media(992) {
+                font-size: 17px;
+                line-height: 22px;
+            }
         }
 
         p {
@@ -361,6 +647,11 @@ textarea {
             font-weight: 300;
             line-height: 150%;
             color: $color-disable-gray;
+
+            @include media(992) {
+                font-size: 6px;
+                line-height: 150%;
+            }
         }
     }
 }
@@ -374,7 +665,19 @@ textarea {
         align-items: stretch;
         justify-content: space-between;
         padding-right: 279px;
+        gap: 100px;
+
+        @include media(1400) {
+            padding-right: 50px;
+        }
+
+        @include media(992) {
+            flex-direction: column;
+            padding: 0;
+            gap: 0px;
+        }
     }
+
 
     &__left {
         width: 665px;
@@ -386,6 +689,18 @@ textarea {
         flex-direction: column;
         align-items: center;
         padding: 165px 0 199px;
+
+        @include media(1400) {
+            width: 400px;
+        }
+
+        @include media(992) {
+            width: 100%;
+            height: 100px;
+            padding: 0;
+            align-items: center;
+            justify-content: flex-start;
+        }
 
         .bg-img {
             position: absolute;
@@ -400,6 +715,11 @@ textarea {
 
         .logo {
             margin-bottom: -49px;
+
+            @include media(992) {
+                height: 54px;
+                margin-bottom: -10px;
+            }
         }
 
         h2 {
@@ -408,6 +728,11 @@ textarea {
             font-weight: 400;
             font-family: $font-rokkitt;
             margin-bottom: -22px;
+
+            @include media(992) {
+                font-size: 22px;
+                margin-bottom: 0;
+            }
         }
 
         p {
@@ -415,15 +740,30 @@ textarea {
             font-weight: 400;
             font-family: $font-libre-baskerville;
             color: black;
+
+            @include media(992) {
+                font-size: 12px;
+            }
         }
     }
 
     &__right {
         width: 522px;
         padding-top: 84px;
-        flex-shrink: 0;
         position: relative;
         z-index: 1;
+        
+        @include media(-1400) {
+            flex-shrink: 0;
+        }
+        
+        @include media(1400) {
+            width: 100%;
+        }
+
+        @include media(992) {
+            padding: 4px 58px 20px 23px;
+        }
 
         .bracket {
             &-1 {
@@ -432,6 +772,13 @@ textarea {
                 top: 24px;
                 transform: translateX(100%);
                 z-index: -1;
+
+                @include media(992) {
+                    top: -20px;
+                    right: 20px;
+                    width: 31px;
+                    transform: translateX(0);
+                }
             }
 
             &-2 {
@@ -440,15 +787,31 @@ textarea {
                 top: 300px;
                 transform: translateX(-100%);
                 z-index: -1;
+
+                @include media(992) {
+                    left: 0;
+                    bottom: -10px;
+                    top: auto;
+                    transform: translateX(100%);
+                    width: 31px;
+                }
             }
         }
 
         .subtitle {
             margin-bottom: 17px;
+
+            @include media(992) {
+                margin-bottom: 10px;
+            }
         }
 
         .sec-title {
             margin-bottom: 40px;
+
+            @include media(992) {
+                margin-bottom: 12px;
+            }
         }
 
         p {
@@ -458,6 +821,12 @@ textarea {
             letter-spacing: 0.2px;
             font-weight: 300;
             margin-bottom: 35px;
+
+            @include media(992) {
+                margin-left: 54px;
+                font-size: 8.7px;
+                margin-bottom: 12px;
+            }
         }
 
         h5 {
@@ -466,6 +835,11 @@ textarea {
             font-weight: 300;
             font-family: $font-montserrat;
             color: $color-disable-gray;
+
+            @include media(992) {
+                font-size: 8.7px;
+                margin-left: 54px;
+            }
         }
     }
 }
@@ -480,6 +854,11 @@ textarea {
         padding: 80px 0 126px;
         position: relative;
         z-index: 1;
+
+        @include media(1336) {
+            max-width: calc(100% - 40px);
+            padding: 18px 0 12px;
+        }
     }
 
     &__bg {
@@ -488,17 +867,29 @@ textarea {
         bottom: 0;
         width: 684px;
         z-index: -1;
+
+        @include media(992) {
+            display: none;
+        }
     }
 
     .subtitle {
         text-align: center;
         margin-bottom: 21px;
         justify-content: center;
+
+        @include media(992) {
+            margin-bottom: 20px;
+        }
     }
 
     .sec-title {
         margin-bottom: 47px;
         text-align: center;
+
+        @include media(992) {
+            margin-bottom: 20px;
+        }
     }
 
     ul {
@@ -506,10 +897,25 @@ textarea {
         grid-template-columns: repeat(4, minmax(0, 1fr));
         gap: 24px;
 
+        @include media(992) {
+            width: calc(100% - 60px);
+            margin: 0 auto;
+            grid-template-columns: repeat((2, minmax(0, 1fr)));
+            gap: 20px 12px;
+        }
+
         li {
             border: 1px solid $color-bg-gray;
             padding: 30px 24px;
             background: #FFF;
+
+            @include media(992) {
+                padding: 15px 12px;
+
+                img {
+                    width: 24px;
+                }
+            }
         }
 
         h3 {
@@ -519,12 +925,21 @@ textarea {
             line-height: 150%;
             text-transform: uppercase;
             font-family: $font-rokkitt;
+
+            @include media(992) {
+                margin: 12px 0 8px;
+                font-size: 8px;
+            }
         }
 
         p {
             font-family: $font-montserrat;
             font-size: 14px;
             line-height: 150%;
+
+            @include media(992) {
+                font-size: 7px;
+            }
         }
     }
 }
@@ -537,15 +952,38 @@ textarea {
         align-items: flex-end;
         padding: 113px 0 102px;
         gap: 90px;
+
+        @include media(1450) {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        @include media(992) {
+            padding: 21px 0 74px;
+        }
     }
 
     &__content {
         .subtitle {
             margin-bottom: 32px;
+
+            @include media(992) {
+                margin-bottom: 20px;
+            }
         }
 
         .sec-title {
             margin-bottom: 40px;
+
+            @include media(1450) {
+                br {
+                    display: none;
+                }
+            }
+
+            @include media(992) {
+                margin-bottom: 20px;
+            }
         }
 
         p {
@@ -555,10 +993,23 @@ textarea {
             max-width: 455px;
             letter-spacing: 0.2px;
             margin-bottom: 40px;
+
+            @include media(1450) {
+                max-width: 100%;
+            }
+
+            @include media(992) {
+                font-size: 9px;
+                margin-bottom: 10px;
+            }
         }
 
         .btn-light {
             color: #232228;
+
+            @include media(992) {
+                // display: none;
+            }
         }
     }
 
@@ -567,12 +1018,25 @@ textarea {
         align-items: flex-start;
         gap: 20px;
 
+        @include media(1450) {
+            justify-content: space-between;
+            width: 100%;
+        }
+
         li {
             width: 229px;
+
+            @include media(992) {
+                width: 54px;
+            }
 
             &:nth-child(even) {
                 .main-img {
                     margin: 26px 0 0;
+
+                    @include media(992) {
+                        margin: 6px 0 0;
+                    }
                 }
             }
         }
@@ -582,6 +1046,11 @@ textarea {
             height: 312px;
             background: #A4834E;
             margin-bottom: 24px;
+
+            @include media(992) {
+                height: 73px;
+                margin-bottom: 6px;
+            }
 
             img {
                 width: 100%;
@@ -597,6 +1066,10 @@ textarea {
             font-family: $font-rokkitt;
             line-height: 150%;
             text-transform: uppercase;
+
+            @include media(992) {
+                font-size: 4px;
+            }
         }
 
         p {
@@ -604,6 +1077,10 @@ textarea {
             font-family: $font-montserrat;
             line-height: 150%;
             color: $color-disable-gray;
+
+            @include media(992) {
+                font-size: 4px;
+            }
         }
     }
 }
@@ -616,6 +1093,10 @@ textarea {
     position: relative;
     z-index: 1;
     padding: 97px 0 109px;
+
+    @include media(992) {
+        padding: 25px 0 26px;
+    }
 
     &__bg {
         position: absolute;
@@ -632,6 +1113,10 @@ textarea {
         color: #fff;
         margin-bottom: 26px;
         text-align: center;
+
+        @include media(992) {
+            margin-bottom: 15px;
+        }
     }
 
     &__list {
@@ -640,6 +1125,15 @@ textarea {
         display: grid;
         grid-template-columns: repeat(6, minmax(0, 1fr));
         gap: 33px;
+
+        @include media(1350) {
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+        }
+
+        @include media(992) {
+            width: calc(100% - 40px);
+            gap: 8px 17px;
+        }
 
         li {
             border: 1px solid $color-white;
@@ -650,6 +1144,10 @@ textarea {
             text-align: center;
             position: relative;
             z-index: 1;
+
+            @include media(992) {
+                height: 101px;
+            }
         }
 
         p {
@@ -658,6 +1156,10 @@ textarea {
             line-height: 150%;
             letter-spacing: 0.2px;
             color: $color-white;
+
+            @include media(992) {
+                font-size: 8.8px;
+            }
         }
 
         img {
@@ -665,12 +1167,24 @@ textarea {
             left: 50%;
             transform: translateX(-50%);
 
+            @include media(992) {
+                width: 13px;
+            }
+
             &:first-child {
                 top: 35px;
+
+                @include media(992) {
+                    top: 18px;
+                }
             }
             
             &:last-child {
                 bottom: 35px;
+
+                @include media(992) {
+                    bottom: 18px;
+                }
             }
         }
     }
@@ -681,21 +1195,38 @@ textarea {
 .review {
     padding: 80px 0 125px;
 
+    @include media(992) {
+        padding: 12px 0 34px;
+    }
+
     .subtitle {
         text-align: center;
         justify-content: center;
         margin-bottom: 20px;
+
+        @include media(992) {
+            font-size: 10px;
+            margin-bottom: 30px;
+        }
     }
 
     .sec-title {
         margin-bottom: 116px;
         text-align: center;
+
+        @include media(992) {
+            margin-bottom: 24px;
+        }
     }
 
     &__swp {
         position: relative;
         z-index: 1;
         margin-bottom: 63px;
+
+        @include media(992) {
+            margin-bottom: 21px;
+        }
 
         .swp_btn {
             width: 48px;
@@ -709,12 +1240,29 @@ textarea {
             transform: translateY(-50%);
             z-index: 2;
 
+            @include media(992) {
+                width: 18px;
+                height: 18px;
+
+                img, svg {
+                    width: 6px;
+                }
+            }
+
             &__prev {
                 left: 0;
+
+                @include media(992) {
+                    left: 3px;
+                }
             }
 
             &__next {
                 right: 0;
+
+                @include media(992) {
+                    right: 3px;
+                }
             }
         }
         
@@ -729,6 +1277,16 @@ textarea {
             z-index: 1;
             padding: 70px 80px 37px;
             text-align: center;
+
+            @include media(992) {
+                padding: 25px 30px 14px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                min-height: 116px;
+                max-width: 311px;
+            }
             
             &::before {
                 content: "";
@@ -740,6 +1298,11 @@ textarea {
                 height: 185px;
                 width: calc(100% + 44px);
                 z-index: -1;
+
+                @include media(992) {
+                    height: calc(100% - 48px);
+                    width: calc(100% + 16px);
+                }
             }
 
             &::after {
@@ -758,12 +1321,24 @@ textarea {
                     position: absolute;
                     top: -130px;
                     right: 24px;
+
+                    @include media(992) {
+                        width: 21px;
+                        top: -47px;
+                        right: 8px;
+                    }
                 }
 
                 &-2 {
                     position: absolute;
                     left: 43px;
                     bottom: -129px;
+
+                    @include media(992) {
+                        width: 21px;
+                        left: 15px;
+                        bottom: -47px;
+                    }
                 }
             }
 
@@ -774,6 +1349,13 @@ textarea {
                 line-height: 150%;
                 letter-spacing: 0.2px;
                 margin-bottom: 40px;
+
+                @include media(992) {
+                    font-size: 6px;
+                    text-align: center;
+                    max-width: 260px;
+                    margin-bottom: 15px;
+                }
             }
 
             h3 {
@@ -781,6 +1363,10 @@ textarea {
                 font-weight: 200;
                 font-size: 16px;
                 text-transform: uppercase;
+
+                @include media(992) {
+                    font-size: 6px;
+                }
             }
         }
     }
@@ -791,6 +1377,10 @@ textarea {
         justify-content: center;
         gap: 8px;
 
+        @include media(992) {
+            gap: 3px;
+        }
+
         span {
             margin: 0 !important;
             padding: 0;
@@ -799,6 +1389,11 @@ textarea {
             height: 8px;
             background: $color-white;
             position: relative;
+
+            @include media(992) {
+                width: 3px;
+                height: 3px;
+            }
 
             &.swiper-pagination-bullet-active {
                 background: $color-dark-yellow;
@@ -814,6 +1409,11 @@ textarea {
                     left: 50%;
                     transform: translate(-50%, -50%);
                     border: 1px solid $color-dark-yellow;
+
+                    @include media(992) {
+                        width: 6px;
+                        height: 6px;
+                    }
                 }
             }
         }
@@ -825,6 +1425,10 @@ textarea {
 .loan {
     margin-bottom: 169px;
 
+    @include media(992) {
+        margin: 0;
+    }
+
     &__container {
         background: #2C2B31;
         border: 1px solid $color-dark-yellow;
@@ -833,6 +1437,14 @@ textarea {
         display: flex;
         flex-direction: column;
         align-items: center;
+
+        @include media(992) {
+            padding: 28px 20px 56px;
+
+            h2 {
+                font-size: 36px;
+            }
+        }
     }
 
     .form_group {
@@ -841,6 +1453,28 @@ textarea {
         grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: 35px 282px;
         margin: 36px 0 67px;
+
+        @include media(1200) {
+            gap: 35px;
+            width: calc(100% - 80px);
+        }
+
+        @include media(992) {
+            grid-template-columns: repeat(1, minmax(0, 1fr));
+            gap: 17px;
+            margin: 25px 0 27px;
+
+            input {
+                height: 25px;
+                font-size: 8px;
+                padding: 0 7px;
+            }
+
+            button {
+                height: 42px;
+                font-size: 12px;
+            }
+        }
     }
 }
 // Loan end
@@ -851,6 +1485,11 @@ textarea {
         padding: 80px 72px 80px 69px;
         background: $color-white;
         max-width: 1440px;
+
+        @include media(992) {
+            background: transparent;
+            padding: 30px 20px 32px;
+        }
     }
 
     &__head {
@@ -859,12 +1498,24 @@ textarea {
         justify-content: space-between;
         margin-bottom: 50px;
 
+        @include media(992) {
+            margin-bottom: 20px;
+
+            h2 {
+                font-size: 36px;
+            }
+        }
+
         .subtitle {
             margin-bottom: 20px;
         }
 
         .btn-light {
             color: #232228;
+
+            @include media(992) {
+                display: none;
+            }
         }
     }
     
@@ -872,6 +1523,16 @@ textarea {
         display: grid;
         grid-template-columns: repeat(4, minmax(0, 1fr));
         gap: 24px;
+
+        @include media(1300) {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        @include media(992) {
+            width: calc(100% - 40px);
+            margin: 0 auto;
+            gap: 20px 12px;
+        }
 
         li:first-child {
             position: relative;
@@ -892,6 +1553,10 @@ textarea {
         .main-img {
             height: 239px;
 
+            @include media(992) {
+                height: 117px;
+            }
+
             img {
                 width: 100%;
                 height: 100%;
@@ -904,6 +1569,11 @@ textarea {
             display: flex;
             flex-direction: column;
             gap: 16px;
+
+            @include media(992) {
+                padding: 12px 12px 18px 15px;
+                gap: 8px;
+            }
         }
 
         p {
@@ -911,6 +1581,11 @@ textarea {
             font-size: 14px;
             line-height: 11px;
             color: #B1B1B1;
+
+            @include media(992) {
+                font-size: 7px;
+                line-height: 5px;
+            }
         }
 
         h3 {
@@ -919,11 +1594,22 @@ textarea {
             line-height: 150%;
             color: #232228;
             text-transform: uppercase;
+
+            @include media(992) {
+                font-size: 8px;
+            }
         }
 
         a {
             color: #232228;
             width: 110px;
+
+            @include media(992) {
+                height: 21px;
+                width: 54px;
+                font-size: 8px;
+                padding: 0;
+            }
         }
     }
 }
@@ -933,6 +1619,10 @@ textarea {
 .course {
     padding: 68px 0 92px;
 
+    @include media(992) {
+        padding: 0 0 56px;
+    }
+
     &__container {
         display: flex;
         flex-direction: column;
@@ -941,10 +1631,20 @@ textarea {
 
     .subtitle {
         margin-bottom: 32px;
+
+        @include media(992) {
+            margin-bottom: 12px;
+        }
     }
 
     .sec-title {
         margin-bottom: 40px;
+
+        @include media(992) {
+            margin-bottom: 20px;
+            font-size: 21px;
+            text-align: center;
+        }
     }
 
     .description {
@@ -952,6 +1652,11 @@ textarea {
         font-size: 16px;
         line-height: 150%;
         font-family: $font-montserrat;
+
+        @include media(992) {
+            font-size: 11px;
+            margin-bottom: 36px;
+        }
     }
 
     .form_group {
@@ -959,12 +1664,32 @@ textarea {
         align-items: center;
         gap: 16px;
 
+        @include media(992) {
+            width: calc(100% - 24px);
+            margin: 0 auto;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 9px;
+        }
+
         .form_inp {
             width: 534px;
+
+            @include media(992) {
+                width: 100%;
+                height: 30px;
+                font-size: 10px;
+            }
         }
 
         .btn-light {
             color: #232228;
+
+            @include media(992) {
+                height: 41px;
+                font-size: 15px;
+                width: 160px;
+            }
         }
     }
 }
@@ -977,8 +1702,17 @@ textarea {
     gap: 0;
     background: #232228;
 
+    @include media(1400) {
+        flex-direction: column-reverse;
+    }
+
     &__map {
         width: 703px;
+
+        @include media(1400) {
+            width: 100%;
+            height: 300px;
+        }
 
         iframe {
             width: 100%;
@@ -994,8 +1728,20 @@ textarea {
         z-index: 1;
         padding: 85px 144px;
 
+        @include media(1400) {
+            width: 100%;
+        }
+
+        @include media(992) {
+            padding: 51px 16px 48px 32px;
+        }
+
         &_in {
             max-width: 593px;
+
+            @include media(992) {
+                max-width: 100%;
+            }
         }
 
         .bg-img {
@@ -1011,10 +1757,21 @@ textarea {
 
         .subtitle {
             margin-bottom: 32px;
+
+            @include media(992) {
+                margin-bottom: 19px;
+            }
         }
 
         .sec-title {
             margin-bottom: 40px;
+            color: #FFF;
+
+            @include media(992) {
+                font-size: 12px;
+                margin-bottom: 24px;
+                line-height: 31px;
+            }
         }
 
         ul {
@@ -1022,6 +1779,11 @@ textarea {
             flex-wrap: wrap;
             gap: 32px 87px;
             margin-bottom: 40px;
+
+            @include media(992) {
+                gap: 20px 50px;
+                margin-bottom: 24px;
+            }
 
             li {
                 display: flex;
@@ -1031,6 +1793,11 @@ textarea {
                 font-size: 16px;
                 font-family: $font-optimal;
                 font-weight: 400;
+
+                @include media(992) {
+                    gap: 20px;
+                    font-size: 10px;
+                }
             }
 
             p {
@@ -1050,16 +1817,37 @@ textarea {
                 color: #FFF;
                 margin-bottom: 24px;
                 text-transform: uppercase;
+
+                @include media(992) {
+                    margin-bottom: 15px;
+                    font-size: 10px;
+                }
             }
 
             .form_control {
                 display: flex;
                 align-items: center;
                 gap: 8px;
+
+                @include media(992) {
+                    gap: 5px;
+
+                    button {
+                        height: 28px;
+                        width: 112px;
+                        font-size: 10px;
+                    }
+                }
             }
 
             .form_inp {
                 width: 298px;
+
+                @include media(992) {
+                    width: 191px;
+                    font-size: 9px;
+                    height: 28px;
+                }
             }
         }
     }
@@ -1073,6 +1861,10 @@ textarea {
     font-size: 12px;
     font-family: $font-montserrat;
     color: #5D5D5D;
+
+    @include media(992) {
+        display: none;
+    }
 }
 // Footer end
 
@@ -1083,6 +1875,11 @@ textarea {
     border-right: 0;
     border-left: 0;
 
+    @include media(992) {
+        border: 0;
+        margin: 24px 0 28px;
+    }
+
     &__container {
         display: flex;
         align-items: center;
@@ -1090,15 +1887,44 @@ textarea {
         gap: 18px;
         padding: 46px 0 58px;
 
+        @include media(992) {
+            flex-wrap: wrap;
+            align-items: flex-start;
+            justify-content: center;
+            gap: 32px;
+        }
+
         li {
             width: 441px;
 
+            @include media(992) {
+                width: 173px;
+            }
+
+            @include media(415) {
+                text-align: center;
+            }
+
             &:nth-child(2) {
                 padding-top: 23px;
+
+                @include media(992) {
+                    padding: 0;
+                }
             }
 
             &:nth-child(3) {
                 padding-top: 12px;
+
+                @include media(992) {
+                    padding: 0;
+                }
+            }
+
+            @include media(622) {
+                &:last-child {
+                    text-align: center;
+                }
             }
         }
 
@@ -1109,6 +1935,12 @@ textarea {
             color: #1F2938;
             letter-spacing: -0.64px;
             margin-bottom: 8px;
+
+            @include media(992) {
+                font-size: 36px;
+                line-height: 38px;
+                margin-bottom: 5px;
+            }
         }
 
         p {
@@ -1117,6 +1949,11 @@ textarea {
             line-height: 24px;
             color: #999EA5;
             letter-spacing: 0.12px;
+
+            @include media(992) {
+                font-size: 12px;
+                line-height: 17px;
+            }
         }
     }
 }
@@ -1127,10 +1964,20 @@ textarea {
     color: #1F2938;
     margin-bottom: 88px;
 
+    @include media(992) {
+        margin-bottom: 0;
+    }
+
     .sec-title {
         font-family: $font-inter;
         font-weight: 600;
         text-transform: inherit;
+
+        @include media(992) {
+            color: #CCB780;
+            font-size: 42px;
+            line-height: 51px;
+        }
     }
 
     &__container {
@@ -1138,15 +1985,35 @@ textarea {
         border: 1px solid #A4834E;
         background: rgba(237, 237, 237, 0.5);
         padding: 70px 86px 90px;
+        
+        @include media(992) {
+            border: 0;
+            background: transparent;
+            padding: 0 25px 50px;
+        }
     }
 
     &__content {
         max-width: 660px;
 
+        @include media(1400) {
+            max-width: 100%;
+            margin-bottom: 50px;
+        }
+
+        @include media(992) {
+            margin-bottom: 26px;
+        }
+
         &_wrap {
             display: flex;
             align-items: flex-start;
             justify-content: space-between;
+            gap: 0px 20px;
+
+            @include media(1400) {
+                flex-direction: column;
+            }
         }
 
         h4 {
@@ -1156,6 +2023,12 @@ textarea {
             font-weight: 500;
             line-height: 24px;
             letter-spacing: 0.12px;
+
+            @include media(992) {
+                margin: 15px 0 16px;
+                font-size: 9px;
+                line-height: 12px;
+            }
         }
 
         p {
@@ -1164,10 +2037,19 @@ textarea {
             font-weight: 600;
             line-height: 40px;
             letter-spacing: -0.36px;
+
+            @include media(992) {
+                font-size: 16px;
+                line-height: 20px;
+            }
         }
     }
 
     &__chart {
+        @include media(1400) {
+            width: 100%;
+        }
+
         .title {
             color: #1F2938;
             font-size: 18px;
@@ -1175,12 +2057,24 @@ textarea {
             line-height: 24px;
             letter-spacing: 0.12px;
             margin-bottom: 73px;
+
+            @include media(992) {
+                margin-bottom: 41px;
+                font-size: 10px;
+                line-height: 13px;
+            }
         }
 
         ul {
             display: flex;
             align-items: flex-end;
             gap: 44px;
+
+            @include media(1400) {
+                width: 100%;
+                justify-content: space-between;
+                gap: 15px;
+            }
 
             li {
                 display: flex;
@@ -1191,18 +2085,30 @@ textarea {
                 &:nth-child(2) {
                     .line {
                         height: 291px;
+
+                        @include media (992) {
+                            height: 166px;
+                        }
                     }
                 }
 
                 &:nth-child(3) {
                     .line {
                         height: 241px;
+
+                        @include media(992) {
+                            height: 137px;
+                        }
                     }
                 }
 
                 &:nth-child(5) {
                     .line {
                         height: 211px;
+
+                        @include media(992) {
+                            height: 120px;
+                        }
                     }
                 }
             }
@@ -1214,6 +2120,12 @@ textarea {
                 font-weight: 600;
                 letter-spacing: 0.12px;
                 margin-bottom: 22px;
+
+                @include media(992) {
+                    font-size: 10px;
+                    line-height: 13px;
+                    margin-bottom: 13px;
+                }
             }
 
             .line {
@@ -1222,6 +2134,12 @@ textarea {
                 background: #A4834E;
                 margin-bottom: 12px;
                 flex-shrink: 0;
+
+                @include media(992) {
+                    width: 52px;
+                    margin-bottom: 6px;
+                    height: 101px;
+                }
             }
 
             p {
@@ -1231,6 +2149,12 @@ textarea {
                 color: black;
                 font-weight: 600;
                 min-height: 86px;
+
+                @include media(992) {
+                    font-size: 10px;
+                    line-height: 13px;
+                    min-height: 49px;
+                }
             }
         }
     }
@@ -1243,6 +2167,10 @@ textarea {
         padding: 0 24px;
         margin-top: 90px;
         position: relative;
+
+        @include media(992) {
+            display: none;
+        }
 
         &::before {
             content: "";
@@ -1295,20 +2223,35 @@ textarea {
 .choose {
     margin-bottom: 112px;
 
+    @include media(992) {
+        margin-bottom: 28px;
+    }
+
     &__title {
         font-size: 44px;
         font-weight: 600;
         line-height: 54px;
         letter-spacing: 0 64px;
         margin-bottom: 40px;
+
+        @include media(992) {
+            font-size: 32px;
+            line-height: 40px;
+            margin-bottom: 54px;
+        }
     }
 
     &__container {
         max-width: 1688px;
+
+        @include media(1736) {
+            max-width: calc(100% - 48px);
+        }
     }
 
     .swiper {
         overflow: visible;
+
         &-wrapper {
             align-items: stretch;
         }
@@ -1318,6 +2261,12 @@ textarea {
             background: rgba(164, 131, 78, 0.5);
             height: auto;
             padding: 28px 28px 34px;
+
+            @include media(992) {
+                width: 150px;
+                padding: 16px;
+                min-height: 175px;
+            }
 
             h3 {
                 width: 64px;
@@ -1332,6 +2281,14 @@ textarea {
                 font-weight: 500;
                 line-height: 32px;
                 background: #FFF;
+
+                @include media(992) {
+                    width: 37px;
+                    height: 37px;
+                    font-size: 14px;
+                    line-height: 18px;
+                    margin-bottom: 24px;
+                }
             }
 
             p {
@@ -1339,6 +2296,11 @@ textarea {
                 line-height: 26px;
                 color: #1F2938;
                 font-weight: 600;
+
+                @include media(992) {
+                    font-size: 12px;
+                    line-height: 15px;
+                }
             }
         }
     }
@@ -1349,10 +2311,18 @@ textarea {
 .order {
     margin-bottom: 48px;
 
+    @include media(992) {
+        margin-bottom: 1px;
+    }
+
     &__container {
         background: #2C2B31;
         padding: 75px 86px;
         max-width: 1688px;
+
+        @include media(992) {
+            padding: 35px 22px 28px;
+        }
     }
 
     &__title {
@@ -1361,6 +2331,12 @@ textarea {
         color: #A4834E;
         font-weight: 600;
         margin-bottom: 16px;
+
+        @include media(992) {
+            font-size: 20px;
+            line-height: 25px;
+            margin-bottom: 8px;
+        }
     }
 
     &__subtitle {
@@ -1369,6 +2345,12 @@ textarea {
         color: #999EA5;
         font-weight: 500;
         margin-bottom: 36px;
+
+        @include media(992) {
+            font-size: 9px;
+            line-height: 11px;
+            margin-bottom: 16px;
+        }
     }
 
     .form_group {
@@ -1379,6 +2361,15 @@ textarea {
         align-items: center;
         gap: 8px;
         margin-bottom: 24px;
+
+        @include media(992) {
+            background: transparent;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 15px;
+            padding: 0;
+            margin-bottom: 10px;
+        }
         
         input {
             width: 100%;
@@ -1386,10 +2377,23 @@ textarea {
             line-height: 24px;
             font-weight: 600;
             font-family: $font-inter;
+
+            @include media(992) {
+                height: 38px;
+                width: 206px;
+                font-size: 9px;
+            }
         }
 
         button {
             flex-shrink: 0;
+
+            @include media(992) {
+                width: 128px;
+                height: 30px;
+                font-size: 9px;
+                line-height: 12px;
+            }
         }
     }
 
@@ -1398,6 +2402,12 @@ textarea {
         line-height: 18px;
         color: #999EA5;
         font-weight: 500;
+
+        @include media(992) {
+            font-size: 6px;
+            line-height: 8.5px;
+            max-width: 206px;
+        }
     }
 }
 // Order end
@@ -1406,6 +2416,11 @@ textarea {
 .partners-top {
     height: 73px;
     margin-bottom: 66px;
+
+    @include media(992) {
+        height: 92px;
+        margin-bottom: 16px;
+    }
 
     img {
         width: 100%;
@@ -1419,12 +2434,22 @@ textarea {
 .partners-home {
     margin-bottom: 56px;
 
+    @include media(992) {
+        margin-bottom: 28px;
+    }
+
     &__container {
         border: 1px solid #A4834E;
         background: rgba(237, 237, 237, 49.8%);
         padding: 116px 88px 182px;
         position: relative;
         z-index: 1;
+
+        @include media(992) {
+            max-width: calc(100% - 44px);
+            padding: 12px 9px 68px;
+            border-width: 0.21px;
+        }
     }
 
     &__bg {
@@ -1433,6 +2458,25 @@ textarea {
         top: 0;
         height: 100%;
         z-index: -1;
+
+        @include media(1300) {
+            position: static;
+        }
+
+        @include media(992) {
+            display: none;
+            height: 252px;
+            width: 100%;
+            object-fit: contain;
+        }
+
+        &.sm {
+            display: none;
+
+            @include media(992) {
+                display: block;
+            }
+        }
     }
 
     .title {
@@ -1441,6 +2485,12 @@ textarea {
         font-weight: 600;
         color: #1F2938;
         margin-bottom: 24px;
+
+        @include media(992) {
+            font-size: 30px;
+            line-height: 32px;
+            margin-bottom: 13px;
+        }
     }
 
     ul {
@@ -1449,11 +2499,30 @@ textarea {
         gap: 6px;
         margin-bottom: 36px;
 
+        @include media(992) {
+            gap: 3.5px;
+            margin-bottom: 21px;
+        }
+
         li {
             font-size: 18px;
             line-height: 24px;
             font-weight: 500;
             color: #1F2938;
+
+            @include media(992) {
+                font-size: 10px;
+                line-height: 14px;
+            }
+        }
+    }
+
+    .btn-yellow {
+        @include media(992) {
+            width: 135px;
+            height: 30px;
+            font-size: 12px;
+            padding: 0;
         }
     }
 }
@@ -1463,9 +2532,19 @@ textarea {
 .cooperation {
     margin-bottom: 56px;
 
+    @include media(992) {
+        margin-bottom: 27px;
+    }
+
     &__container {
         border: 1px solid #A4834E;
         padding: 56px 69px;
+
+        @include media(992) {
+            border-width: 0.33px;
+            max-width: 100%;
+            padding: 4px 26px 27px;
+        }
     }
 
     .title {
@@ -1474,12 +2553,24 @@ textarea {
         font-weight: 600;
         color: #1F2938;
         margin-bottom: 40px;
+
+        @include media(992) {
+            font-size: 40px;
+            line-height: 48px;
+            margin-bottom: 11px;
+        }
     }
 
     ul {
         display: flex;
         align-items: stretch;
         gap: 32px;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        @include media(992) {
+            gap: 10px;
+        }
 
         li {
             background: #A4834E;
@@ -1488,6 +2579,15 @@ textarea {
             display: flex;
             flex-direction: column;
             gap: 15px;
+            width: 300px;
+
+            @include media(992) {
+                width: 101px;
+                min-height: 98px;
+                border-radius: 10px;
+                padding: 8px 19px 8px 8px;
+                gap: 7.5px;
+            }
         }
 
         h4 {
@@ -1502,6 +2602,13 @@ textarea {
             display: flex;
             align-items: center;
             justify-content: center;
+
+            @include media(992) {
+                width: 20px;
+                height: 20px;
+                font-size: 7.8px;
+                line-height: 10px;
+            }
         }
 
         h3 {
@@ -1509,6 +2616,11 @@ textarea {
             font-size: 24px;
             line-height: 32px;
             font-weight: 600;
+
+            @include media(992) {
+                font-size: 7.8px;
+                line-height: 10px;
+            }
         }
 
         p {
@@ -1516,6 +2628,11 @@ textarea {
             line-height: 24px;
             font-weight: 500;
             color: #fff;
+
+            @include media(992) {
+                font-size: 5.2px;
+                line-height: 7px;
+            }
         }
     }
 }
@@ -1525,8 +2642,16 @@ textarea {
 .partners {
     margin-bottom: 112px;
 
+    @include media(992) {
+        margin-bottom: 38px;
+    }
+
     &__container {
         max-width: 1688px;
+
+        @include media(1732) {
+            max-width: calc(100% - 44px);
+        }
     }
 
     .title {
@@ -1535,12 +2660,31 @@ textarea {
         font-weight: 600;
         color: #1F2938;
         margin-bottom: 40px;
+
+        @include media(992) {
+            font-size: 40px;
+            line-height: 54px;
+            margin-bottom: 21px;
+        }
     }
 
     ul {
         display: grid;
         grid-template-columns: repeat(6, minmax(0, 1fr));
         gap: 32px;
+
+        @include media(1450) {
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+        }
+
+        @include media(992) {
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+        }
+
+        @include media(768) {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 16px 22px;
+        }
 
         li {
             height: 82px;
@@ -1549,6 +2693,14 @@ textarea {
             display: flex;
             align-items: center;
             justify-content: center;
+
+            @include media(768) {
+                height: 57px;
+
+                img {
+                    height: 34px;
+                }
+            }
         }
     }
 }
@@ -1558,8 +2710,16 @@ textarea {
 .faq {
     margin-bottom: 56px;
 
+    @include media(992) {
+        margin-bottom: 39px;
+    }
+
     &__container {
         max-width: 1688px;
+
+        @include media(1754) {
+            max-width: calc(100% - 66px);
+        }
     }
 
     &__title {
@@ -1568,6 +2728,12 @@ textarea {
         font-weight: bold;
         color: #1F2938;
         margin-bottom: 27px;
+
+        @include media(992) {
+            font-size: 24px;
+            line-height: 26px;
+            margin-bottom: 6px;
+        }
     }
 
     &__navs {
@@ -1576,11 +2742,21 @@ textarea {
         gap: 24px;
         margin-bottom: 28px;
 
+        @include media(992) {
+            gap: 6px;
+            margin-bottom: 6px;
+        }
+
         a {
             font-size: 18px;
             line-height: 24px;
             font-weight: 600;
             color: #999EA5;
+
+            @include media(992) {
+                font-size: 4.7px;
+                line-height: 6px;
+            }
 
             &.active {
                 color: #A4834E;
@@ -1593,8 +2769,14 @@ textarea {
         background: #EDEDED;
         padding: 30px 56px 24px;
 
+        @include media(992) {
+            border-width: 0.21px;
+            padding: 6px 11px 5px;
+        }
+
         &_item:not(:last-child) {
             border-bottom: 1px solid rgba(153, 158, 165, 0.3);
+            border-width: 0.21px;
         }
 
         button {
@@ -1605,6 +2787,12 @@ textarea {
             font-size: 20px;
             line-height: 26px;
             font-weight: 600;
+
+            @include media(992) {
+                padding: 6.8px 0;
+                font-size: 4.12px;
+                line-height: 5px;
+            }
         }
 
         p {
@@ -1613,6 +2801,12 @@ textarea {
             font-size: 16px;
             line-height: 24px;
             font-weight: 500;
+
+            @include media(992) {
+                font-size: 3.3px;
+                line-height: 5px;
+                padding-bottom: 5px;
+            }
         }
     }
 }
@@ -1632,8 +2826,16 @@ textarea {
 .become {
     margin-bottom: 72px;
 
+    @include media(992) {
+        margin-bottom: 26px;
+    }
+
     &__container {
         max-width: 1688px;
+
+        @include media(1732) {
+            max-width: calc(100% - 44px);
+        }
     }
 
     &__head {
@@ -1642,11 +2844,20 @@ textarea {
         justify-content: space-between;
         margin-bottom: 40px;
 
+        @include media(992) {
+            margin-bottom: 25px;
+        }
+
         .title {
             font-size: 44px;
             line-height: 54px;
             color: #1F2938;
             font-weight: 600;
+
+            @include media(992) {
+                font-size: 32px;
+                line-height: 32px;
+            }
         }
 
         a {
@@ -1654,6 +2865,10 @@ textarea {
             font-size: 18px;
             line-height: 24px;
             font-weight: 600;
+
+            @include media(992) {
+                display: none;
+            }
         }
     }
 
@@ -1661,6 +2876,12 @@ textarea {
         display: flex;
         align-items: stretch;
         gap: 32px;
+
+        @include media(992) {
+            gap: 14px 11px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
 
         li {
             width: 100%;
@@ -1670,6 +2891,13 @@ textarea {
             flex-direction: column;
             gap: 29px;
             padding: 60px 33px 48px;
+
+            @include media(992) {
+                width: 160px;
+                min-height: 101px;
+                gap: 8px;
+                padding: 17px 16px;
+            }
         }
 
         h4 {
@@ -1684,6 +2912,13 @@ textarea {
             line-height: 40px;
             font-weight: 500;
             color: white;
+
+            @include media(992) {
+                width: 29px;
+                height: 29px;
+                font-size: 9.52px;
+                line-height: 11px;
+            }
         }
 
         h3 {
@@ -1691,6 +2926,11 @@ textarea {
             line-height: 40px;
             font-weight: 600;
             color: #1F2938;
+
+            @include media(992) {
+                font-size: 8.9px;
+                line-height: 11.9px;
+            }
         }
 
         p {
@@ -1698,6 +2938,11 @@ textarea {
             line-height: 24px;
             font-weight: 500;
             color: #9CA2AB;
+
+            @include media(992) {
+                font-size: 5.35px;
+                line-height: 7.1px;
+            }
         }
     }
 }

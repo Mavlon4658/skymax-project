@@ -20,6 +20,7 @@ if (phoneInp.length) {
 const reviewSwp = new Swiper('.review__swp .swiper', {
     slidesPerView: 1,
     loop: true,
+    spaceBetween: 100,
     navigation: {
         nextEl: ".review__swp .swp_btn__next",
         prevEl: ".review__swp .swp_btn__prev",
@@ -32,7 +33,12 @@ const reviewSwp = new Swiper('.review__swp .swiper', {
 
 const chooseSwp = new Swiper('.choose .swiper', {
     slidesPerView: 'auto',
-    spaceBetween: 32,
+    spaceBetween: 18,
+    breakpoints: {
+        992: {
+            spaceBetween: 32,
+        }
+    }
 })
 
 const accordions = document.querySelectorAll('.accordion');
@@ -78,3 +84,21 @@ modalClasses.forEach(cls => {
         bodyVisible();
     }
 })
+
+const mobileMenu = document.querySelector('.mobile-menu');
+const mobileMenuBg = document.querySelector('.mobile-menu__bg');
+const bars = document.querySelector('.header .bars');
+
+bars.onclick = () => {
+    mobileMenu.classList.add('active');
+    bodyHidden();
+}
+
+mobileMenuBg.onclick = () => {
+    mobileMenu.classList.remove('active');
+    mobileMenu.classList.add('end-active');
+    setTimeout(() => {
+        mobileMenu.classList.remove('end-active');
+        bodyVisible();
+    }, 400);
+}
