@@ -2,8 +2,26 @@
 
 @font-face {
     font-family: "Optimal";
-    src: url('../fonts/Optimal.ttf');
+    src: url('../fonts/Optimal/Optimal.ttf');
     font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Rokkit';
+    src: url('../fonts/Rokkitt/Rokkitt-ExtraLight.ttf');
+    font-weight: 200;
+}
+
+@font-face {
+    font-family: 'Rokkit';
+    src: url('../fonts/Rokkitt/Rokkitt-Regular.ttf');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Rokkit';
+    src: url('../fonts/Rokkitt/Rokkitt-SemiBold.ttf');
+    font-weight: 600;
 }
 
 // Fonts

@@ -1,8 +1,23 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Rokkitt:ital,wght@0,100..900;1,100..900&display=swap");
 @font-face {
   font-family: "Optimal";
-  src: url("../fonts/Optimal.ttf");
+  src: url("../fonts/Optimal/Optimal.ttf");
   font-weight: 400;
+}
+@font-face {
+  font-family: "Rokkit";
+  src: url("../fonts/Rokkitt/Rokkitt-ExtraLight.ttf");
+  font-weight: 200;
+}
+@font-face {
+  font-family: "Rokkit";
+  src: url("../fonts/Rokkitt/Rokkitt-Regular.ttf");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Rokkit";
+  src: url("../fonts/Rokkitt/Rokkitt-SemiBold.ttf");
+  font-weight: 600;
 }
 * {
   padding: 0;
