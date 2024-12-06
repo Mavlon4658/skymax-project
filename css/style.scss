@@ -65,6 +65,11 @@ textarea {
         font-size: 16px;
         font-weight: 400;
         text-transform: uppercase;
+
+        &:hover {
+            background: #E3C37A;
+            color: #FFF;
+        }
     }
 
     &-yellow {
@@ -79,6 +84,12 @@ textarea {
         font-family: $font-inter;
         font-weight: 600;
         font-size: 20px;
+
+        &:hover {
+            background: transparent;
+            border: 1px solid #B1B1B1;
+            color: #B1B1B1;
+        }
     }
 }
 
@@ -230,6 +241,10 @@ textarea {
 
         @include media(992) {
             display: none;
+        }
+
+        &:hover {
+            color: #A4834E;
         }
     }
 
@@ -916,6 +931,15 @@ textarea {
                     width: 24px;
                 }
             }
+
+            &:hover {
+                background: #A4834E;
+                color: #FFF;
+
+                img {
+                    filter: brightness(0) invert(1);
+                }
+            }
         }
 
         h3 {
@@ -1039,6 +1063,12 @@ textarea {
                     }
                 }
             }
+
+            &:hover {
+                img {
+                    filter: grayscale(0);
+                }
+            }
         }
 
         .main-img {
@@ -1057,6 +1087,7 @@ textarea {
                 height: 100%;
                 object-fit: cover;
                 object-position: center bottom;
+                filter: grayscale(100%);
             }
         }
 
@@ -1806,6 +1837,10 @@ textarea {
 
             a {
                 color: #E3C37A;
+
+                &:hover {
+                    color: #A4834E;
+                }
             }
         }
 
