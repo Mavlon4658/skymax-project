@@ -2474,10 +2474,23 @@ textarea {
   top: 0;
   height: 100%;
   z-index: -1;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+@media screen and (max-width: 1650px) {
+  .partners-home__bg {
+    width: 60%;
+  }
+}
+@media screen and (max-width: 1450px) {
+  .partners-home__bg {
+    width: 50%;
+  }
 }
 @media screen and (max-width: 1300px) {
   .partners-home__bg {
     position: static;
+    width: auto;
   }
 }
 @media screen and (max-width: 992px) {
@@ -2485,8 +2498,6 @@ textarea {
     display: none;
     height: 252px;
     width: 100%;
-    -o-object-fit: contain;
-       object-fit: contain;
   }
 }
 .partners-home__bg.sm {

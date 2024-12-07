@@ -2493,16 +2493,25 @@ textarea {
         top: 0;
         height: 100%;
         z-index: -1;
+        object-fit: contain;
+
+        @include media(1650) {
+            width: 60%;
+        }
+
+        @include media(1450) {
+            width: 50%;
+        }
 
         @include media(1300) {
             position: static;
+            width: auto;
         }
 
         @include media(992) {
             display: none;
             height: 252px;
             width: 100%;
-            object-fit: contain;
         }
 
         &.sm {
