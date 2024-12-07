@@ -235,7 +235,7 @@ textarea {
         top: 25px;
         right: 0;
         color: #E3C37A;
-        font-family: $font-optimal;
+        font-family: $font-montserrat;
         font-weight: 400;
         font-size: 16px;
 
@@ -308,7 +308,7 @@ textarea {
 
         .phone-link {
             color: #E3C37A;
-            font-family: $font-optimal;
+            font-family: $font-montserrat;
         }
     }
 
@@ -1837,6 +1837,7 @@ textarea {
 
             a {
                 color: #E3C37A;
+                font-family: $font-montserrat;
 
                 &:hover {
                     color: #A4834E;

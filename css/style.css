@@ -314,7 +314,7 @@ textarea {
   top: 25px;
   right: 0;
   color: #E3C37A;
-  font-family: "Optimal", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 400;
   font-size: 16px;
 }
@@ -382,7 +382,7 @@ textarea {
 }
 .mobile-menu ul .phone-link {
   color: #E3C37A;
-  font-family: "Optimal", sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 .mobile-menu.active {
   display: block;
@@ -1845,6 +1845,7 @@ textarea {
 }
 .contact__content ul a {
   color: #E3C37A;
+  font-family: "Montserrat", sans-serif;
 }
 .contact__content ul a:hover {
   color: #A4834E;
