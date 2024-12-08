@@ -1,340 +1,346 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <!-- Link Swiper's CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    <!-- Style CSS -->
-    <link rel="stylesheet" href="./css/style.css">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<!-- Link Swiper's CSS -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+	<!-- Style CSS -->
+	<link rel="stylesheet" href="./css/style.css">
 </head>
+
 <body class="bg-white">
-    
-    <div class="wrapper">
 
-        <!-- Header -->
-        <header class="header">
-            <div class="container header__container">
-                <a href="/" class="header__logo">
-                    <img src="./images/logo.svg" alt="">
-                    <img src="./images/logo-sm.svg" alt="" class="sm">
-                </a>
-                <ul class="header__navs">
-                    <li>
-                        <a href="#" class="active">Главная</a>
-                    </li>
-                    <li>
-                        <a href="#">Услуги</a>
-                    </li>
-                    <li>
-                        <a href="#">Партнерство</a>
-                    </li>
-                    <li>
-                        <a href="#">О компании</a>
-                    </li>
-                    <li>
-                        <a href="#">Контакты</a>
-                    </li>
-                </ul>
-                <a href="tel:++79686113473" class="phone-link">+7 (968) 611 34 73</a>
-                <button class="bars">
-                    <img src="./images/bars.svg" alt="">
-                </button>
-            </div>
-        </header>
-        <!-- Header end -->
+	<div class="wrapper">
 
-        <!-- Mobile menu -->
-        <section class="mobile-menu">
-            <div class="mobile-menu__bg"></div>
-            <div class="mobile-menu__content">
-                <ul>
-                    <li>
-                        <a href="#" class="active">Главная</a>
-                    </li>
-                    <li>
-                        <a href="#">Услуги</a>
-                    </li>
-                    <li>
-                        <a href="#">Партнерство</a>
-                    </li>
-                    <li>
-                        <a href="#">О компании</a>
-                    </li>
-                    <li>
-                        <a href="#">Контакты</a>
-                    </li>
-                    <li>
-                        <a href="tel:+7 (968) 611 34 73" class="phone-link">+7 (968) 611 34 73</a>
-                    </li>
-                </ul>
-            </div>
-        </section>
-        <!-- Mobile menu end -->
+		<!-- Header -->
+		<header class="header">
+			<div class="container header__container">
+				<a href="/" class="header__logo">
+					<img src="./images/logo.svg" alt="">
+					<img src="./images/logo-sm.svg" alt="" class="sm">
+				</a>
+				<ul class="header__navs">
+					<li>
+						<a href="/">Главная</a>
+					</li>
+					<li>
+						<a href="index.html#service">Услуги</a>
+					</li>
+					<li>
+						<a href="partners.html">Партнерство</a>
+					</li>
+					<li>
+						<a href="about.html" class="active">О компании</a>
+					</li>
+					<li>
+						<a href="#contact">Контакты</a>
+					</li>
+				</ul>
+				<a href="tel:++79686113473" class="phone-link">+7 (968) 611 34 73</a>
+				<button class="bars">
+					<img src="./images/bars.svg" alt="">
+				</button>
+			</div>
+		</header>
+		<!-- Header end -->
 
-        <!-- Modals -->
-        <!-- Aplication modal -->
-        <section class="modal application-modal">
-            <div class="modal__bg"></div>
-            <div class="modal__content">
-                <button type="button" class="modal__close">
-                    <img src="./images/times.svg" alt="">
-                </button>
-                <h2 class="sec-title">СПАСИБО ЗА ОБРАЩЕНИЕ <br> <span>мы с вами свяжемся</span></h2>
-            </div>
-        </section>
-        <!-- Aplication modal end -->
+		<!-- Mobile menu -->
+		<section class="mobile-menu">
+			<div class="mobile-menu__bg"></div>
+			<div class="mobile-menu__content">
+				<ul>
+					<li>
+						<a href="/" class="active">Главная</a>
+					</li>
+					<li>
+						<a href="index.html#service">Услуги</a>
+					</li>
+					<li>
+						<a href="partners.html">Партнерство</a>
+					</li>
+					<li>
+						<a href="about.html" class="active">О компании</a>
+					</li>
+					<li>
+						<a href="#contact">Контакты</a>
+					</li>
+					<li>
+						<a href="tel:+7 (968) 611 34 73" class="phone-link">+7 (968) 611 34 73</a>
+					</li>
+				</ul>
+			</div>
+		</section>
+		<!-- Mobile menu end -->
 
-        <!-- Partner modal -->
-        <section class="modal partner-modal">
-            <div class="modal__bg"></div>
-            <div class="modal__content">
-                <button type="button" class="modal__close">
-                    <img src="./images/times.svg" alt="">
-                </button>
-                <h2 class="sec-title">Оставьте заявку <br> <span>мы с вами свяжемся</span></h2>
-                <div class="form_group">
-                    <input type="text" class="form_inp" placeholder="Ваше имя ">
-                    <input type="tel" name="" placeholder="+7 (___) ___ __ __" id="" class="form_inp">
-                </div>
-                <button class="btn-light">Отправить</button>
-            </div>
-        </section>
-        <!-- Partner modal end -->
-        <!-- Modals end -->
+		<!-- Modals -->
+		<!-- Aplication modal -->
+		<section class="modal application-modal">
+			<div class="modal__bg"></div>
+			<div class="modal__content">
+				<button type="button" class="modal__close">
+					<img src="./images/times.svg" alt="">
+				</button>
+				<h2 class="sec-title">СПАСИБО ЗА ОБРАЩЕНИЕ <br> <span>мы с вами свяжемся</span></h2>
+			</div>
+		</section>
+		<!-- Aplication modal end -->
 
-        <main>
+		<!-- Partner modal -->
+		<section class="modal partner-modal">
+			<div class="modal__bg"></div>
+			<div class="modal__content">
+				<button type="button" class="modal__close">
+					<img src="./images/times.svg" alt="">
+				</button>
+				<h2 class="sec-title">Оставьте заявку <br> <span>мы с вами свяжемся</span></h2>
+				<div class="form_group">
+					<input type="text" class="form_inp" placeholder="Ваше имя ">
+					<input type="tel" name="" placeholder="+7 (___) ___ __ __" id="" class="form_inp">
+				</div>
+				<button class="btn-light">Отправить</button>
+			</div>
+		</section>
+		<!-- Partner modal end -->
+		<!-- Modals end -->
 
-            <!-- Home -->
-            <section class="home">
-                <img src="./images/home-bg.png" alt="" class="home__bg">
-                <div class="container home__container">
-                    <h2 class="home__title">PEGAS COMPANY</h2>
-                    <p class="home__description">ФИНАНСОВАЯ поддержка, на которую можно положиться в любой ситуации.</p>
-                    <img src="./images/home-card.png" alt="" class="home__card">
-                    <img src="./images/home-card-sm.png" alt="" class="home__card sm">
-                    <div class="home__form">
-                        <h3>Нужна консультация?</h3>
-                        <div class="form_group">
-                            <input type="tel" class="form_inp phone" placeholder="+7 (___) ___ __ __">
-                            <button class="btn-light application-modal__open">консультация</button>
-                        </div>
-                    </div>
-                    <ul>
-                        <li>
-                            <h4>89%</h4>
-                            <p>Успешных кейсов</p>
-                        </li>
-                        <li>
-                            <h4>14</h4>
-                            <p>Сотрудника в штате</p>
-                        </li>
-                        <li>
-                            <h4>5</h4>
-                            <p>Действующих адвокатов</p>
-                        </li>
-                    </ul>
-                </div>
-            </section>
-            <!-- Home end -->
+		<main>
 
-            <!-- About -->
-            <section class="about">
-                <ul class="container about__container">
-                    <li>
-                        <h3>> 1 300</h3>
-                        <p>довольных клиентов за <br>2024 год</p>
-                    </li>
-                    <li>
-                        <h3>> 1340</h3>
-                        <p>одобренных кредитов в <br>2024 году</p>
-                    </li>
-                    <li>
-                        <h3>1.5</h3>
-                        <p>млрд. рублей общая сумма <br>одобренных кредитов за <br> 2024 год</p>
-                    </li>
-                </ul>
-            </section>
-            <!-- About end -->
+			<!-- Home -->
+			<section class="home">
+				<img src="./images/home-bg.png" alt="" class="home__bg">
+				<div class="container home__container">
+					<h2 class="home__title">PEGAS COMPANY</h2>
+					<p class="home__description">ФИНАНСОВАЯ поддержка, на которую можно положиться в любой ситуации.</p>
+					<img src="./images/home-card.png" alt="" class="home__card">
+					<img src="./images/home-card-sm.png" alt="" class="home__card sm">
+					<div class="home__form">
+						<h3>Нужна консультация?</h3>
+						<div class="form_group">
+							<input type="tel" class="form_inp phone" placeholder="+7 (___) ___ __ __">
+							<button class="btn-light application-modal__open">консультация</button>
+						</div>
+					</div>
+					<ul>
+						<li>
+							<h4>89%</h4>
+							<p>Успешных кейсов</p>
+						</li>
+						<li>
+							<h4>14</h4>
+							<p>Сотрудника в штате</p>
+						</li>
+						<li>
+							<h4>5</h4>
+							<p>Действующих адвокатов</p>
+						</li>
+					</ul>
+				</div>
+			</section>
+			<!-- Home end -->
 
-            <!-- History -->
-            <section class="history">
-                <div class="container history__container">
-                    <div class="history__content_wrap">
-                        <div class="history__content">
-                            <h2 class="sec-title">Наша история</h2>
-                            <h4>Время прорыва</h4>
-                            <p>Завершается 2024 год и подводя итоги своей
-                                работы можем смело сказать, что год для
-                                компании стал прорывным. Не смотря на
-                                санкции и плавующую ключевую ставку ЦБ
-                                мы смогли помочь тысячам клиентам
-                                получить кредиты на оптимальных условиях
-                                и уверенно закрепиться в лидерах в сфере
-                                кредитования.</p>
-                        </div>
-                        <div class="history__chart">
-                            <h3 class="title">2024 в цифрах</h3>
-                            <ul>
-                                <li>
-                                    <h4>+1.5</h4>
-                                    <div class="line"></div>
-                                    <p>Клиенты</p>
-                                </li>
-                                <li>
-                                    <h4>+53</h4>
-                                    <div class="line"></div>
-                                    <p>Cумма <br> одобрений <br> (млрд.)</p>
-                                </li>
-                                <li>
-                                    <h4>+34</h4>
-                                    <div class="line"></div>
-                                    <p>Банков <br> партнеров</p>
-                                </li>
-                                <li>
-                                    <h4>+6500</h4>
-                                    <div class="line"></div>
-                                    <p>Услуги</p>
-                                </li>
-                                <li>
-                                    <h4>+12</h4>
-                                    <div class="line"></div>
-                                    <p>Команда</p>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <ul class="history__year">
-                        <li>2017</li>
-                        <li>2018</li>
-                        <li>2019</li>
-                        <li>2020</li>
-                        <li>2021</li>
-                        <li>2022</li>
-                        <li>2023</li>
-                        <li>2024</li>
-                    </ul>
-                </div>
-            </section>
-            <!-- History end -->
+			<!-- About -->
+			<section class="about">
+				<ul class="container about__container">
+					<li>
+						<h3>> 1 300</h3>
+						<p>довольных клиентов за <br>2024 год</p>
+					</li>
+					<li>
+						<h3>> 1340</h3>
+						<p>одобренных кредитов в <br>2024 году</p>
+					</li>
+					<li>
+						<h3>1.5</h3>
+						<p>млрд. рублей общая сумма <br>одобренных кредитов за <br> 2024 год</p>
+					</li>
+				</ul>
+			</section>
+			<!-- About end -->
 
-            <!-- Choose us -->
-            <section class="choose">
-                <div class="container choose__container">
-                    <h2 class="choose__title">Почему выбирают нас</h2>
-                    <div class="swiper">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <h3>1</h3>
-                                <p>Одобряем кредит с любой кредитной историей</p>
-                            </div>
-                            <div class="swiper-slide">
-                                <h3>2</h3>
-                                <p>Оплата нашей
-                                    работы после
-                                    получения кредита</p>
-                            </div>
-                            <div class="swiper-slide">
-                                <h3>3</h3>
-                                <p>Каждому 4-му
-                                    клиенту одобряем
-                                    ставку 3% годовых</p>
-                            </div>
-                            <div class="swiper-slide">
-                                <h3>4</h3>
-                                <p>Только для наших
-                                    клиентов
-                                    преференции от
-                                    банка и льготные
-                                    ставки</p>
-                            </div>
-                            <div class="swiper-slide">
-                                <h3>5</h3>
-                                <p>Заводим заявки в
-                                    банк дистанционно</p>
-                            </div>
-                            <div class="swiper-slide">
-                                <h3>6</h3>
-                                <p>Бесплатный анализ
-                                    кредитной истории
-                                    из 3-х бюро</p>
-                            </div>
-                            <div class="swiper-slide">
-                                <h3>7</h3>
-                                <p>Срок одобрения кредита 1 час</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <!-- Choose us end -->
+			<!-- History -->
+			<section class="history">
+				<div class="container history__container">
+					<div class="history__content_wrap">
+						<div class="history__content">
+							<h2 class="sec-title">Наша история</h2>
+							<h4>Время прорыва</h4>
+							<p>Завершается 2024 год и подводя итоги своей
+								работы можем смело сказать, что год для
+								компании стал прорывным. Не смотря на
+								санкции и плавующую ключевую ставку ЦБ
+								мы смогли помочь тысячам клиентам
+								получить кредиты на оптимальных условиях
+								и уверенно закрепиться в лидерах в сфере
+								кредитования.</p>
+						</div>
+						<div class="history__chart">
+							<h3 class="title">2024 в цифрах</h3>
+							<ul>
+								<li>
+									<h4>+1.5</h4>
+									<div class="line"></div>
+									<p>Клиенты</p>
+								</li>
+								<li>
+									<h4>+53</h4>
+									<div class="line"></div>
+									<p>Cумма <br> одобрений <br> (млрд.)</p>
+								</li>
+								<li>
+									<h4>+34</h4>
+									<div class="line"></div>
+									<p>Банков <br> партнеров</p>
+								</li>
+								<li>
+									<h4>+6500</h4>
+									<div class="line"></div>
+									<p>Услуги</p>
+								</li>
+								<li>
+									<h4>+12</h4>
+									<div class="line"></div>
+									<p>Команда</p>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<ul class="history__year">
+						<li>2017</li>
+						<li>2018</li>
+						<li>2019</li>
+						<li>2020</li>
+						<li>2021</li>
+						<li>2022</li>
+						<li>2023</li>
+						<li>2024</li>
+					</ul>
+				</div>
+			</section>
+			<!-- History end -->
 
-            <!-- Order -->
-            <section class="order">
-                <div class="container order__container">
-                    <h2 class="order__title">Закажите бесплатную консультацию</h2>
-                    <h3 class="order__subtitle">Перезвоним через 1 минуту!</h3>
-                    <div class="form_group">
-                        <input type="tel" name="" placeholder="Мобильный телефон" id="" class="form_inp">
-                        <button class="btn-yellow application-modal__open">Хочу консультацию</button>
-                    </div>
-                    <p class="order__description">* Нажимая на кнопку, вы выражаете согласие с политикой конфиденциальности и <br> правилами обработки персональных данных</p>
-                </div>
-            </section>
-            <!-- Order end -->
+			<!-- Choose us -->
+			<section class="choose">
+				<div class="container choose__container">
+					<h2 class="choose__title">Почему выбирают нас</h2>
+					<div class="swiper">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+								<h3>1</h3>
+								<p>Одобряем кредит с любой кредитной историей</p>
+							</div>
+							<div class="swiper-slide">
+								<h3>2</h3>
+								<p>Оплата нашей
+									работы после
+									получения кредита</p>
+							</div>
+							<div class="swiper-slide">
+								<h3>3</h3>
+								<p>Каждому 4-му
+									клиенту одобряем
+									ставку 3% годовых</p>
+							</div>
+							<div class="swiper-slide">
+								<h3>4</h3>
+								<p>Только для наших
+									клиентов
+									преференции от
+									банка и льготные
+									ставки</p>
+							</div>
+							<div class="swiper-slide">
+								<h3>5</h3>
+								<p>Заводим заявки в
+									банк дистанционно</p>
+							</div>
+							<div class="swiper-slide">
+								<h3>6</h3>
+								<p>Бесплатный анализ
+									кредитной истории
+									из 3-х бюро</p>
+							</div>
+							<div class="swiper-slide">
+								<h3>7</h3>
+								<p>Срок одобрения кредита 1 час</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- Choose us end -->
 
-            <!-- Contact -->
-            <section class="contact">
-                <div class="contact__map">
-                    <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Ab840c9e381a78bc8bebbfcd415ac8efe87f8debd1d7c85132eb1937645038cb3&amp;source=constructor" width="1175" height="720" frameborder="0"></iframe>
-                </div>
-                <div class="contact__content">
-                    <img src="./images/contact-bg.png" alt="" class="bg-img">
-                    <div class="cotact__content_in">
-                        <p class="subtitle">
-                            <span class="line"></span>
-                            <span>На связи с нами</span>
-                        </p>
-                        <h2 class="sec-title"><span>Контактная</span> информация</h2>
-                        <ul>
-                            <li>
-                                <p>телефон</p>
-                                <a href="tel:+7 (968) 611 3473">+7 (968) 611 3473</a>
-                            </li>
-                            <li>
-                                <p>почта</p>
-                                <a href="mailto:pegas_kredit@mail.ru" target="_blank">pegas_kredit@mail.ru</a>
-                            </li>
-                            <li>
-                                <p>адрес</p>
-                                <a href="#">Москва, ул. 2-я синичкина, д. 9A, с.7</a>
-                            </li>
-                        </ul>
-                        <div class="form_group">
-                            <h3>Нужна консультация?</h3>
-                            <div class="form_control">
-                                <input type="tel" class="form_inp" placeholder="+7 (___) ___ __ __">
-                                <button class="btn-light application-modal__open">Заказать звонок</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <!-- Contact end -->
+			<!-- Order -->
+			<section class="order">
+				<div class="container order__container">
+					<h2 class="order__title">Закажите бесплатную консультацию</h2>
+					<h3 class="order__subtitle">Перезвоним через 1 минуту!</h3>
+					<div class="form_group">
+						<input type="tel" name="" placeholder="Мобильный телефон" id="" class="form_inp">
+						<button class="btn-yellow application-modal__open">Хочу консультацию</button>
+					</div>
+					<p class="order__description">* Нажимая на кнопку, вы выражаете согласие с политикой конфиденциальности и <br>
+						правилами обработки персональных данных</p>
+				</div>
+			</section>
+			<!-- Order end -->
 
-        </main>
+			<!-- Contact -->
+			<section class="contact" id="contact">
+				<div class="contact__map">
+					<iframe
+						src="https://yandex.ru/map-widget/v1/?um=constructor%3Ab840c9e381a78bc8bebbfcd415ac8efe87f8debd1d7c85132eb1937645038cb3&amp;source=constructor"
+						width="1175" height="720" frameborder="0"></iframe>
+				</div>
+				<div class="contact__content">
+					<img src="./images/contact-bg.png" alt="" class="bg-img">
+					<div class="cotact__content_in">
+						<p class="subtitle">
+							<span class="line"></span>
+							<span>На связи с нами</span>
+						</p>
+						<h2 class="sec-title"><span>Контактная</span> информация</h2>
+						<ul>
+							<li>
+								<p>телефон</p>
+								<a href="tel:+7 (968) 611 3473">+7 (968) 611 3473</a>
+							</li>
+							<li>
+								<p>почта</p>
+								<a href="mailto:pegas_kredit@mail.ru" target="_blank">pegas_kredit@mail.ru</a>
+							</li>
+							<li>
+								<p>адрес</p>
+								<a href="#">Москва, ул. 2-я синичкина, д. 9A, с.7</a>
+							</li>
+						</ul>
+						<div class="form_group">
+							<h3>Нужна консультация?</h3>
+							<div class="form_control">
+								<input type="tel" class="form_inp" placeholder="+7 (___) ___ __ __">
+								<button class="btn-light application-modal__open">Заказать звонок</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- Contact end -->
 
-        <!-- Footer -->
-        <footer class="footer">© Все права защищены 2024</footer>
-        <!-- Footer end -->
+		</main>
 
-    </div>
+		<!-- Footer -->
+		<footer class="footer">© Все права защищены 2024</footer>
+		<!-- Footer end -->
 
-    <script src="https://unpkg.com/imask"></script>
-    <!-- Swiper JS -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <!-- JS file -->
-    <script src="./js/main.js"></script>
+	</div>
+
+	<script src="https://unpkg.com/imask"></script>
+	<!-- Swiper JS -->
+	<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+	<!-- JS file -->
+	<script src="./js/main.js"></script>
 </body>
+
 </html>

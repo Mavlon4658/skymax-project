@@ -10,7 +10,6 @@ const phoneInp = document.querySelectorAll('.form_inp.phone');
 
 if (phoneInp.length) {
     phoneInp.forEach(el => {
-        console.log('ishladi');
         IMask(el, {
             mask: '+{7}(000)000-00-00',
         })
@@ -102,3 +101,13 @@ mobileMenuBg.onclick = () => {
         bodyVisible();
     }, 400);
 }
+
+const header = document.querySelector('.header');
+
+window.addEventListener('scroll', function () {
+    if (this.scrollY > 30) {
+        header.classList.add('active');
+    } else {
+        header.classList.remove('active')
+    }
+})

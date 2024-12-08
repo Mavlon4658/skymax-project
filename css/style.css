@@ -226,6 +226,14 @@ textarea {
   z-index: 2;
   border-bottom: 1px solid rgba(177, 177, 177, 0.16);
 }
+.header.active {
+  position: fixed;
+  background-image: url("../images/partners-top.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 4;
+}
 @media screen and (max-width: 992px) {
   .header {
     border: 0;

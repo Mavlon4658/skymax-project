@@ -1,422 +1,451 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <!-- Link Swiper's CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    <!-- Style CSS -->
-    <link rel="stylesheet" href="./css/style.css">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<!-- Link Swiper's CSS -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+	<!-- Style CSS -->
+	<link rel="stylesheet" href="./css/style.css">
 </head>
+
 <body class="bg-white">
-    
-    <div class="wrapper">
 
-        <!-- Header -->
-        <header class="header">
-            <div class="container header__container">
-                <a href="/" class="header__logo">
-                    <img src="./images/logo.svg" alt="">
-                    <img src="./images/logo-sm.svg" alt="" class="sm">
-                </a>
-                <ul class="header__navs">
-                    <li>
-                        <a href="#" class="active">Главная</a>
-                    </li>
-                    <li>
-                        <a href="#">Услуги</a>
-                    </li>
-                    <li>
-                        <a href="#">Партнерство</a>
-                    </li>
-                    <li>
-                        <a href="#">О компании</a>
-                    </li>
-                    <li>
-                        <a href="#">Контакты</a>
-                    </li>
-                </ul>
-                <a href="tel:++79686113473" class="phone-link">+7 (968) 611 34 73</a>
-                <button class="bars">
-                    <img src="./images/bars.svg" alt="">
-                </button>
-            </div>
-        </header>
-        <!-- Header end -->
+	<div class="wrapper">
 
-        <!-- Mobile menu -->
-        <section class="mobile-menu">
-            <div class="mobile-menu__bg"></div>
-            <div class="mobile-menu__content">
-                <ul>
-                    <li>
-                        <a href="#" class="active">Главная</a>
-                    </li>
-                    <li>
-                        <a href="#">Услуги</a>
-                    </li>
-                    <li>
-                        <a href="#">Партнерство</a>
-                    </li>
-                    <li>
-                        <a href="#">О компании</a>
-                    </li>
-                    <li>
-                        <a href="#">Контакты</a>
-                    </li>
-                    <li>
-                        <a href="tel:+7 (968) 611 34 73" class="phone-link">+7 (968) 611 34 73</a>
-                    </li>
-                </ul>
-            </div>
-        </section>
-        <!-- Mobile menu end -->
+		<!-- Header -->
+		<header class="header">
+			<div class="container header__container">
+				<a href="/" class="header__logo">
+					<img src="./images/logo.svg" alt="">
+					<img src="./images/logo-sm.svg" alt="" class="sm">
+				</a>
+				<ul class="header__navs">
+					<li>
+						<a href="index.html">Главная</a>
+					</li>
+					<li>
+						<a href="index.html#service">Услуги</a>
+					</li>
+					<li>
+						<a href="partners.html" class="active">Партнерство</a>
+					</li>
+					<li>
+						<a href="about.html">О компании</a>
+					</li>
+					<li>
+						<a href="#contact">Контакты</a>
+					</li>
+				</ul>
+				<a href="tel:++79686113473" class="phone-link">+7 (968) 611 34 73</a>
+				<button class="bars">
+					<img src="./images/bars.svg" alt="">
+				</button>
+			</div>
+		</header>
+		<!-- Header end -->
 
-        <!-- Modals -->
-        <!-- Aplication modal -->
-        <section class="modal application-modal">
-            <div class="modal__bg"></div>
-            <div class="modal__content">
-                <button type="button" class="modal__close">
-                    <img src="./images/times.svg" alt="">
-                </button>
-                <h2 class="sec-title">СПАСИБО ЗА ОБРАЩЕНИЕ <br> <span>мы с вами свяжемся</span></h2>
-            </div>
-        </section>
-        <!-- Aplication modal end -->
+		<!-- Mobile menu -->
+		<section class="mobile-menu">
+			<div class="mobile-menu__bg"></div>
+			<div class="mobile-menu__content">
+				<ul>
+					<li>
+						<a href="index.html">Главная</a>
+					</li>
+					<li>
+						<a href="index.html#service">Услуги</a>
+					</li>
+					<li>
+						<a href="partners.html" class="active">Партнерство</a>
+					</li>
+					<li>
+						<a href="about.html">О компании</a>
+					</li>
+					<li>
+						<a href="#contact">Контакты</a>
+					</li>
+				</ul>
+			</div>
+		</section>
+		<!-- Mobile menu end -->
 
-        <!-- Partner modal -->
-        <section class="modal partner-modal">
-            <div class="modal__bg"></div>
-            <div class="modal__content">
-                <button type="button" class="modal__close">
-                    <img src="./images/times.svg" alt="">
-                </button>
-                <h2 class="sec-title">Оставьте заявку <br> <span>мы с вами свяжемся</span></h2>
-                <div class="form_group">
-                    <input type="text" class="form_inp" placeholder="Ваше имя ">
-                    <input type="tel" name="" placeholder="+7 (___) ___ __ __" id="" class="form_inp">
-                </div>
-                <button class="btn-light application-modal__open">Отправить</button>
-            </div>
-        </section>
-        <!-- Partner modal end -->
-        <!-- Modals end -->
+		<!-- Modals -->
+		<!-- Aplication modal -->
+		<section class="modal application-modal">
+			<div class="modal__bg"></div>
+			<div class="modal__content">
+				<button type="button" class="modal__close">
+					<img src="./images/times.svg" alt="">
+				</button>
+				<h2 class="sec-title">СПАСИБО ЗА ОБРАЩЕНИЕ <br> <span>мы с вами свяжемся</span></h2>
+			</div>
+		</section>
+		<!-- Aplication modal end -->
 
-        <main>
+		<!-- Partner modal -->
+		<section class="modal partner-modal">
+			<div class="modal__bg"></div>
+			<div class="modal__content">
+				<button type="button" class="modal__close">
+					<img src="./images/times.svg" alt="">
+				</button>
+				<h2 class="sec-title">Оставьте заявку <br> <span>мы с вами свяжемся</span></h2>
+				<div class="form_group">
+					<input type="text" class="form_inp" placeholder="Ваше имя ">
+					<input type="tel" name="" placeholder="+7 (___) ___ __ __" id="" class="form_inp">
+				</div>
+				<button class="btn-light application-modal__open">Отправить</button>
+			</div>
+		</section>
+		<!-- Partner modal end -->
+		<!-- Modals end -->
 
-            <!-- Partners top -->
-            <section class="partners-top">
-                <img src="./images/partners-top.png" alt="">
-            </section>
-            <!-- Partners top end -->
+		<main>
 
-            <!-- Partners home -->
-            <section class="partners-home">
-                <div class="container partners-home__container">
-                    <h2 class="title">Сотрудничаем с <br>лучшими</h2>
-                    <ul>
-                        <li>– Официальные агенты  96 банков России</li>
-                        <li>– Более 100 частных инвесторов и компаний</li>
-                        <li>– Все договоренности закреплены договорами</li>
-                        <li>– Доверяем наших клиентов только проверенным партнерам</li>
-                    </ul>
-                    <a href="#" class="btn-yellow partner-modal__open">Стать партнером</a>
-                    <img src="./images/partners-home-bg.png" class="partners-home__bg" alt="">
-                    <img src="./images/partners-home-bg-sm.png" class="partners-home__bg sm" alt="">
-                </div>
-            </section>
-            <!-- Partners home end -->
+			<!-- Partners top -->
+			<section class="partners-top">
+				<img src="./images/partners-top.png" alt="">
+			</section>
+			<!-- Partners top end -->
 
-            <!-- Cooperation -->
-            <section class="cooperation">
-                <div class="container cooperation__container">
-                    <h2 class="title">Сотрудничаем</h2>
-                    <ul>
-                        <li>
-                            <h4>1</h4>
-                            <h3>С банками</h3>
-                            <p>Если вы банк, то мы готовы
-                                официально предоставлять вам
-                                наших клиентов</p>
-                        </li>
-                        <li>
-                            <h4>2</h4>
-                            <h3>С агентами</h3>
-                            <p>У вас есть свои клиенты? Тогда
-                                приводите их к нам за
-                                комиссию</p>
-                        </li>
-                        <li>
-                            <h4>3</h4>
-                            <h3>С частными
-                                инвесторами</h3>
-                            <p>Предоставим большой поток
-                                клиентов за выгодные условия
-                                по кредитам</p>
-                        </li>
-                        <li>
-                            <h4>4</h4>
-                            <h3>С брокерами</h3>
-                            <p>5-летнее сотрудничество. 
-                                Самые сложные сделки
-                                разрешимы</p>
-                        </li>
-                        <li>
-                            <h4>5</h4>
-                            <h3>С агентствами
-                                недвижимости</h3>
-                            <p>Снимаем ограничения
-                                в пользу клиентов. Ставка в
-                                банках ниже на 0,5-2% </p>
-                        </li>
-                    </ul>
-                </div>
-            </section>
-            <!-- Cooperation end -->
+			<!-- Partners home -->
+			<section class="partners-home">
+				<div class="container partners-home__container">
+					<h2 class="title">Сотрудничаем с <br>лучшими</h2>
+					<ul>
+						<li>– Официальные агенты  96 банков России</li>
+						<li>– Более 100 частных инвесторов и компаний</li>
+						<li>– Все договоренности закреплены договорами</li>
+						<li>– Доверяем наших клиентов только проверенным партнерам</li>
+					</ul>
+					<a href="#" class="btn-yellow partner-modal__open">Стать партнером</a>
+					<img src="./images/partners-home-bg.png" class="partners-home__bg" alt="">
+					<img src="./images/partners-home-bg-sm.png" class="partners-home__bg sm" alt="">
+				</div>
+			</section>
+			<!-- Partners home end -->
 
-            <!-- Partners -->
-            <section class="partners">
-                <div class="container partners__container">
-                    <h2 class="title">Уже с нами</h2>
-                    <ul>
-                        <li>
-                            <img src="./images/partners-1.svg" alt="">
-                        </li>
-                        <li>
-                            <img src="./images/partners-2.svg" alt="">
-                        </li>
-                        <li>
-                            <img src="./images/partners-3.svg" alt="">
-                        </li>
-                        <li>
-                            <img src="./images/partners-4.svg" alt="">
-                        </li>
-                        <li>
-                            <img src="./images/partners-5.svg" alt="">
-                        </li>
-                        <li>
-                            <img src="./images/partners-6.svg" alt="">
-                        </li>
-                        <li>
-                            <img src="./images/partners-7.svg" alt="">
-                        </li>
-                        <li>
-                            <img src="./images/partners-8.svg" alt="">
-                        </li>
-                        <li>
-                            <img src="./images/partners-9.svg" alt="">
-                        </li>
-                        <li>
-                            <img src="./images/partners-10.svg" alt="">
-                        </li>
-                        <li>
-                            <img src="./images/partners-11.svg" alt="">
-                        </li>
-                        <li>
-                            <img src="./images/partners-12.svg" alt="">
-                        </li>
-                    </ul>
-                </div>
-            </section>
-            <!-- Partners end -->
+			<!-- Cooperation -->
+			<section class="cooperation">
+				<div class="container cooperation__container">
+					<h2 class="title">Сотрудничаем</h2>
+					<ul>
+						<li>
+							<h4>1</h4>
+							<h3>С банками</h3>
+							<p>Если вы банк, то мы готовы
+								официально предоставлять вам
+								наших клиентов</p>
+						</li>
+						<li>
+							<h4>2</h4>
+							<h3>С агентами</h3>
+							<p>У вас есть свои клиенты? Тогда
+								приводите их к нам за
+								комиссию</p>
+						</li>
+						<li>
+							<h4>3</h4>
+							<h3>С частными
+								инвесторами</h3>
+							<p>Предоставим большой поток
+								клиентов за выгодные условия
+								по кредитам</p>
+						</li>
+						<li>
+							<h4>4</h4>
+							<h3>С брокерами</h3>
+							<p>5-летнее сотрудничество.
+								Самые сложные сделки
+								разрешимы</p>
+						</li>
+						<li>
+							<h4>5</h4>
+							<h3>С агентствами
+								недвижимости</h3>
+							<p>Снимаем ограничения
+								в пользу клиентов. Ставка в
+								банках ниже на 0,5-2% </p>
+						</li>
+					</ul>
+				</div>
+			</section>
+			<!-- Cooperation end -->
 
-            <!-- FAQ -->
-            <section class="faq">
-                <div class="container faq__container">
-                    <h2 class="faq__title">Часто задаваемые вопросы</h2>
-                    <ul class="faq__navs">
-                        <li>
-                            <a href="#" class="active">Кредит наличными</a>
-                        </li>
-                        <li>
-                            <a href="#">Рефинансирование</a>
-                        </li>
-                        <li>
-                            <a href="#">Кредит для бизнеса</a>
-                        </li>
-                        <li>
-                            <a href="#">Ипотека</a>
-                        </li>
-                        <li>
-                            <a href="#">Под залог авто</a>
-                        </li>
-                        <li>
-                            <a href="#">Под залог недвижимости</a>
-                        </li>
-                    </ul>
-                    <ul class="faq__accordion">
-                        <li class="accordion faq__accordion_item active">
-                            <button class="accordion_btn">Могу ли я получить кредит на ремонт с плохой кредитной историей?</button>
-                            <div class="accordion_body">
-                                <p>PEGAS COMPANY работает с широким спектром клиентов, включая тех, у кого есть проблемы с кредитной историей. Мы оцениваем <br> каждую заявку индивидуально, стремясь найти оптимальное решение для каждого клиента.</p>
-                            </div>
-                        </li>
-                        <li class="accordion faq__accordion_item">
-                            <button class="accordion_btn">Одобрят ли кредит, если я не соблюдал график по погашению кредита?</button>
-                            <div class="accordion_body">
-                                <p>PEGAS COMPANY работает с широким спектром клиентов, включая тех, у кого есть проблемы с кредитной историей. Мы оцениваем <br> каждую заявку индивидуально, стремясь найти оптимальное решение для каждого клиента.</p>
-                            </div>
-                        </li>
-                        <li class="accordion faq__accordion_item">
-                            <button class="accordion_btn">Зачем обращаться к вам, когда я сам могу оформить кредит в любом банке?</button>
-                            <div class="accordion_body">
-                                <p>PEGAS COMPANY работает с широким спектром клиентов, включая тех, у кого есть проблемы с кредитной историей. Мы оцениваем <br> каждую заявку индивидуально, стремясь найти оптимальное решение для каждого клиента.</p>
-                            </div>
-                        </li>
-                        <li class="accordion faq__accordion_item">
-                            <button class="accordion_btn">Если место жительство и адрес работы в регионе, одобрят ли кредит в Московском банке?</button>
-                            <div class="accordion_body">
-                                <p>PEGAS COMPANY работает с широким спектром клиентов, включая тех, у кого есть проблемы с кредитной историей. Мы оцениваем <br> каждую заявку индивидуально, стремясь найти оптимальное решение для каждого клиента.</p>
-                            </div>
-                        </li>
-                        <li class="accordion faq__accordion_item">
-                            <button class="accordion_btn">Как повысить кредитный рейтинг?</button>
-                            <div class="accordion_body">
-                                <p>PEGAS COMPANY работает с широким спектром клиентов, включая тех, у кого есть проблемы с кредитной историей. Мы оцениваем <br> каждую заявку индивидуально, стремясь найти оптимальное решение для каждого клиента.</p>
-                            </div>
-                        </li>
-                        <li class="accordion faq__accordion_item">
-                            <button class="accordion_btn">Каковы особенности потребительских кредитов на Crediti.ru?</button>
-                            <div class="accordion_body">
-                                <p>PEGAS COMPANY работает с широким спектром клиентов, включая тех, у кого есть проблемы с кредитной историей. Мы оцениваем <br> каждую заявку индивидуально, стремясь найти оптимальное решение для каждого клиента.</p>
-                            </div>
-                        </li>
-                        <li class="accordion faq__accordion_item">
-                            <button class="accordion_btn">Какие условия кредитования доступны для студентов?</button>
-                            <div class="accordion_body">
-                                <p>PEGAS COMPANY работает с широким спектром клиентов, включая тех, у кого есть проблемы с кредитной историей. Мы оцениваем <br> каждую заявку индивидуально, стремясь найти оптимальное решение для каждого клиента.</p>
-                            </div>
-                        </li>
-                        <li class="accordion faq__accordion_item">
-                            <button class="accordion_btn">Какие виды кредитов предоставляются для строительства?</button>
-                            <div class="accordion_body">
-                                <p>PEGAS COMPANY работает с широким спектром клиентов, включая тех, у кого есть проблемы с кредитной историей. Мы оцениваем <br> каждую заявку индивидуально, стремясь найти оптимальное решение для каждого клиента.</p>
-                            </div>
-                        </li>
-                        <li class="accordion faq__accordion_item">
-                            <button class="accordion_btn">Каковы условия кредитования для покупки автомобиля?</button>
-                            <div class="accordion_body">
-                                <p>PEGAS COMPANY работает с широким спектром клиентов, включая тех, у кого есть проблемы с кредитной историей. Мы оцениваем <br> каждую заявку индивидуально, стремясь найти оптимальное решение для каждого клиента.</p>
-                            </div>
-                        </li>
-                        <li class="accordion faq__accordion_item">
-                            <button class="accordion_btn">Каковы условия и процентные ставки для кредита на погашение долгов?</button>
-                            <div class="accordion_body">
-                                <p>PEGAS COMPANY работает с широким спектром клиентов, включая тех, у кого есть проблемы с кредитной историей. Мы оцениваем <br> каждую заявку индивидуально, стремясь найти оптимальное решение для каждого клиента.</p>
-                            </div>
-                        </li>
-                        <li class="accordion faq__accordion_item">
-                            <button class="accordion_btn">Могу ли я получить кредит на медицинские расходы?</button>
-                            <div class="accordion_body">
-                                <p>PEGAS COMPANY работает с широким спектром клиентов, включая тех, у кого есть проблемы с кредитной историей. Мы оцениваем <br> каждую заявку индивидуально, стремясь найти оптимальное решение для каждого клиента.</p>
-                            </div>
-                        </li>
-                        <li class="accordion faq__accordion_item">
-                            <button class="accordion_btn">Какие документы необходимы для получения кредита?</button>
-                            <div class="accordion_body">
-                                <p>PEGAS COMPANY работает с широким спектром клиентов, включая тех, у кого есть проблемы с кредитной историей. Мы оцениваем <br> каждую заявку индивидуально, стремясь найти оптимальное решение для каждого клиента.</p>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </section>
-            <!-- FAQ end -->
+			<!-- Partners -->
+			<section class="partners">
+				<div class="container partners__container">
+					<h2 class="title">Уже с нами</h2>
+					<ul>
+						<li>
+							<img src="./images/partners-1.svg" alt="">
+						</li>
+						<li>
+							<img src="./images/partners-2.svg" alt="">
+						</li>
+						<li>
+							<img src="./images/partners-3.svg" alt="">
+						</li>
+						<li>
+							<img src="./images/partners-4.svg" alt="">
+						</li>
+						<li>
+							<img src="./images/partners-5.svg" alt="">
+						</li>
+						<li>
+							<img src="./images/partners-6.svg" alt="">
+						</li>
+						<li>
+							<img src="./images/partners-7.svg" alt="">
+						</li>
+						<li>
+							<img src="./images/partners-8.svg" alt="">
+						</li>
+						<li>
+							<img src="./images/partners-9.svg" alt="">
+						</li>
+						<li>
+							<img src="./images/partners-10.svg" alt="">
+						</li>
+						<li>
+							<img src="./images/partners-11.svg" alt="">
+						</li>
+						<li>
+							<img src="./images/partners-12.svg" alt="">
+						</li>
+					</ul>
+				</div>
+			</section>
+			<!-- Partners end -->
 
-            <!-- Become partner -->
-            <section class="become">
-                <div class="container become__container">
-                    <div class="become__head">
-                        <h2 class="title">Станьте партнером</h2>
-                        <a href="#">Стать партнером</a>
-                    </div>
-                    <ul>
-                        <li>
-                            <h4>1</h4>
-                            <h3>Заявка</h3>
-                            <p>Онлайн или по телефону <br>+7 (495) 190-77-08</p>
-                        </li>
-                        <li>
-                            <h4>2</h4>
-                            <h3>Договор</h3>
-                            <p>Обсуждаем условия сотрудничества и <br>подписываем агентский договор</p>
-                        </li>
-                        <li>
-                            <h4>3</h4>
-                            <h3>Готово!</h3>
-                            <p>Вы получаете клиентов на долгосрочной основе</p>
-                        </li>
-                    </ul>
-                </div>
-            </section>
-            <!-- Become partner end -->
+			<!-- FAQ -->
+			<section class="faq">
+				<div class="container faq__container">
+					<h2 class="faq__title">Часто задаваемые вопросы</h2>
+					<ul class="faq__navs">
+						<li>
+							<a href="#" class="active">Кредит наличными</a>
+						</li>
+						<li>
+							<a href="#">Рефинансирование</a>
+						</li>
+						<li>
+							<a href="#">Кредит для бизнеса</a>
+						</li>
+						<li>
+							<a href="#">Ипотека</a>
+						</li>
+						<li>
+							<a href="#">Под залог авто</a>
+						</li>
+						<li>
+							<a href="#">Под залог недвижимости</a>
+						</li>
+					</ul>
+					<ul class="faq__accordion">
+						<li class="accordion faq__accordion_item active">
+							<button class="accordion_btn">Могу ли я получить кредит на ремонт с плохой кредитной историей?</button>
+							<div class="accordion_body">
+								<p>PEGAS COMPANY работает с широким спектром клиентов, включая тех, у кого есть проблемы с кредитной
+									историей. Мы оцениваем <br> каждую заявку индивидуально, стремясь найти оптимальное решение для
+									каждого клиента.</p>
+							</div>
+						</li>
+						<li class="accordion faq__accordion_item">
+							<button class="accordion_btn">Одобрят ли кредит, если я не соблюдал график по погашению кредита?</button>
+							<div class="accordion_body">
+								<p>PEGAS COMPANY работает с широким спектром клиентов, включая тех, у кого есть проблемы с кредитной
+									историей. Мы оцениваем <br> каждую заявку индивидуально, стремясь найти оптимальное решение для
+									каждого клиента.</p>
+							</div>
+						</li>
+						<li class="accordion faq__accordion_item">
+							<button class="accordion_btn">Зачем обращаться к вам, когда я сам могу оформить кредит в любом
+								банке?</button>
+							<div class="accordion_body">
+								<p>PEGAS COMPANY работает с широким спектром клиентов, включая тех, у кого есть проблемы с кредитной
+									историей. Мы оцениваем <br> каждую заявку индивидуально, стремясь найти оптимальное решение для
+									каждого клиента.</p>
+							</div>
+						</li>
+						<li class="accordion faq__accordion_item">
+							<button class="accordion_btn">Если место жительство и адрес работы в регионе, одобрят ли кредит в
+								Московском банке?</button>
+							<div class="accordion_body">
+								<p>PEGAS COMPANY работает с широким спектром клиентов, включая тех, у кого есть проблемы с кредитной
+									историей. Мы оцениваем <br> каждую заявку индивидуально, стремясь найти оптимальное решение для
+									каждого клиента.</p>
+							</div>
+						</li>
+						<li class="accordion faq__accordion_item">
+							<button class="accordion_btn">Как повысить кредитный рейтинг?</button>
+							<div class="accordion_body">
+								<p>PEGAS COMPANY работает с широким спектром клиентов, включая тех, у кого есть проблемы с кредитной
+									историей. Мы оцениваем <br> каждую заявку индивидуально, стремясь найти оптимальное решение для
+									каждого клиента.</p>
+							</div>
+						</li>
+						<li class="accordion faq__accordion_item">
+							<button class="accordion_btn">Каковы особенности потребительских кредитов на Crediti.ru?</button>
+							<div class="accordion_body">
+								<p>PEGAS COMPANY работает с широким спектром клиентов, включая тех, у кого есть проблемы с кредитной
+									историей. Мы оцениваем <br> каждую заявку индивидуально, стремясь найти оптимальное решение для
+									каждого клиента.</p>
+							</div>
+						</li>
+						<li class="accordion faq__accordion_item">
+							<button class="accordion_btn">Какие условия кредитования доступны для студентов?</button>
+							<div class="accordion_body">
+								<p>PEGAS COMPANY работает с широким спектром клиентов, включая тех, у кого есть проблемы с кредитной
+									историей. Мы оцениваем <br> каждую заявку индивидуально, стремясь найти оптимальное решение для
+									каждого клиента.</p>
+							</div>
+						</li>
+						<li class="accordion faq__accordion_item">
+							<button class="accordion_btn">Какие виды кредитов предоставляются для строительства?</button>
+							<div class="accordion_body">
+								<p>PEGAS COMPANY работает с широким спектром клиентов, включая тех, у кого есть проблемы с кредитной
+									историей. Мы оцениваем <br> каждую заявку индивидуально, стремясь найти оптимальное решение для
+									каждого клиента.</p>
+							</div>
+						</li>
+						<li class="accordion faq__accordion_item">
+							<button class="accordion_btn">Каковы условия кредитования для покупки автомобиля?</button>
+							<div class="accordion_body">
+								<p>PEGAS COMPANY работает с широким спектром клиентов, включая тех, у кого есть проблемы с кредитной
+									историей. Мы оцениваем <br> каждую заявку индивидуально, стремясь найти оптимальное решение для
+									каждого клиента.</p>
+							</div>
+						</li>
+						<li class="accordion faq__accordion_item">
+							<button class="accordion_btn">Каковы условия и процентные ставки для кредита на погашение долгов?</button>
+							<div class="accordion_body">
+								<p>PEGAS COMPANY работает с широким спектром клиентов, включая тех, у кого есть проблемы с кредитной
+									историей. Мы оцениваем <br> каждую заявку индивидуально, стремясь найти оптимальное решение для
+									каждого клиента.</p>
+							</div>
+						</li>
+						<li class="accordion faq__accordion_item">
+							<button class="accordion_btn">Могу ли я получить кредит на медицинские расходы?</button>
+							<div class="accordion_body">
+								<p>PEGAS COMPANY работает с широким спектром клиентов, включая тех, у кого есть проблемы с кредитной
+									историей. Мы оцениваем <br> каждую заявку индивидуально, стремясь найти оптимальное решение для
+									каждого клиента.</p>
+							</div>
+						</li>
+						<li class="accordion faq__accordion_item">
+							<button class="accordion_btn">Какие документы необходимы для получения кредита?</button>
+							<div class="accordion_body">
+								<p>PEGAS COMPANY работает с широким спектром клиентов, включая тех, у кого есть проблемы с кредитной
+									историей. Мы оцениваем <br> каждую заявку индивидуально, стремясь найти оптимальное решение для
+									каждого клиента.</p>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</section>
+			<!-- FAQ end -->
 
-            <!-- Order -->
-            <section class="order">
-                <div class="container order__container">
-                    <h2 class="order__title">Закажите бесплатную консультацию</h2>
-                    <h3 class="order__subtitle">Перезвоним через 1 минуту!</h3>
-                    <div class="form_group">
-                        <input type="tel" name="" placeholder="Мобильный телефон" id="" class="form_inp">
-                        <button class="btn-yellow application-modal__open">Хочу консультацию</button>
-                    </div>
-                    <p class="order__description">* Нажимая на кнопку, вы выражаете согласие с политикой конфиденциальности и <br> правилами обработки персональных данных</p>
-                </div>
-            </section>
-            <!-- Order end -->
+			<!-- Become partner -->
+			<section class="become">
+				<div class="container become__container">
+					<div class="become__head">
+						<h2 class="title">Станьте партнером</h2>
+						<a href="#">Стать партнером</a>
+					</div>
+					<ul>
+						<li>
+							<h4>1</h4>
+							<h3>Заявка</h3>
+							<p>Онлайн или по телефону <br>+7 (495) 190-77-08</p>
+						</li>
+						<li>
+							<h4>2</h4>
+							<h3>Договор</h3>
+							<p>Обсуждаем условия сотрудничества и <br>подписываем агентский договор</p>
+						</li>
+						<li>
+							<h4>3</h4>
+							<h3>Готово!</h3>
+							<p>Вы получаете клиентов на долгосрочной основе</p>
+						</li>
+					</ul>
+				</div>
+			</section>
+			<!-- Become partner end -->
 
-            <!-- Contact -->
-            <section class="contact">
-                <div class="contact__map">
-                    <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Ab840c9e381a78bc8bebbfcd415ac8efe87f8debd1d7c85132eb1937645038cb3&amp;source=constructor" width="1175" height="720" frameborder="0"></iframe>
-                </div>
-                <div class="contact__content">
-                    <img src="./images/contact-bg.png" alt="" class="bg-img">
-                    <div class="cotact__content_in">
-                        <p class="subtitle">
-                            <span class="line"></span>
-                            <span>На связи с нами</span>
-                        </p>
-                        <h2 class="sec-title"><span>Контактная</span> информация</h2>
-                        <ul>
-                            <li>
-                                <p>телефон</p>
-                                <a href="tel:+7 (968) 611 3473">+7 (968) 611 3473</a>
-                            </li>
-                            <li>
-                                <p>почта</p>
-                                <a href="mailto:pegas_kredit@mail.ru" target="_blank">pegas_kredit@mail.ru</a>
-                            </li>
-                            <li>
-                                <p>адрес</p>
-                                <a href="#">Москва, ул. 2-я синичкина, д. 9A, с.7</a>
-                            </li>
-                        </ul>
-                        <div class="form_group">
-                            <h3>Нужна консультация?</h3>
-                            <div class="form_control">
-                                <input type="tel" class="form_inp" placeholder="+7 (___) ___ __ __">
-                                <button class="btn-light application-modal__open">Заказать звонок</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <!-- Contact end -->
+			<!-- Order -->
+			<section class="order">
+				<div class="container order__container">
+					<h2 class="order__title">Закажите бесплатную консультацию</h2>
+					<h3 class="order__subtitle">Перезвоним через 1 минуту!</h3>
+					<div class="form_group">
+						<input type="tel" name="" placeholder="Мобильный телефон" id="" class="form_inp">
+						<button class="btn-yellow application-modal__open">Хочу консультацию</button>
+					</div>
+					<p class="order__description">* Нажимая на кнопку, вы выражаете согласие с политикой конфиденциальности и <br>
+						правилами обработки персональных данных</p>
+				</div>
+			</section>
+			<!-- Order end -->
 
-        </main>
+			<!-- Contact -->
+			<section class="contact" id="contact">
+				<div class="contact__map">
+					<iframe
+						src="https://yandex.ru/map-widget/v1/?um=constructor%3Ab840c9e381a78bc8bebbfcd415ac8efe87f8debd1d7c85132eb1937645038cb3&amp;source=constructor"
+						width="1175" height="720" frameborder="0"></iframe>
+				</div>
+				<div class="contact__content">
+					<img src="./images/contact-bg.png" alt="" class="bg-img">
+					<div class="cotact__content_in">
+						<p class="subtitle">
+							<span class="line"></span>
+							<span>На связи с нами</span>
+						</p>
+						<h2 class="sec-title"><span>Контактная</span> информация</h2>
+						<ul>
+							<li>
+								<p>телефон</p>
+								<a href="tel:+7 (968) 611 3473">+7 (968) 611 3473</a>
+							</li>
+							<li>
+								<p>почта</p>
+								<a href="mailto:pegas_kredit@mail.ru" target="_blank">pegas_kredit@mail.ru</a>
+							</li>
+							<li>
+								<p>адрес</p>
+								<a href="#">Москва, ул. 2-я синичкина, д. 9A, с.7</a>
+							</li>
+						</ul>
+						<div class="form_group">
+							<h3>Нужна консультация?</h3>
+							<div class="form_control">
+								<input type="tel" class="form_inp" placeholder="+7 (___) ___ __ __">
+								<button class="btn-light application-modal__open">Заказать звонок</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- Contact end -->
 
-        <!-- Footer -->
-        <footer class="footer">© Все права защищены 2024</footer>
-        <!-- Footer end -->
+		</main>
 
-    </div>
+		<!-- Footer -->
+		<footer class="footer">© Все права защищены 2024</footer>
+		<!-- Footer end -->
 
-    <script src="https://unpkg.com/imask"></script>
-    <!-- Swiper JS -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <!-- JS file -->
-    <script src="./js/main.js"></script>
+	</div>
+
+	<script src="https://unpkg.com/imask"></script>
+	<!-- Swiper JS -->
+	<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+	<!-- JS file -->
+	<script src="./js/main.js"></script>
 </body>
+
 </html>
